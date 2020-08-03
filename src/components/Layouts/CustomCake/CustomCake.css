@@ -1,0 +1,56 @@
+.custom-heading{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.custom-heading h1{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 48px;
+    color: #F24472;
+}
+
+.custom-heading img{
+    margin-top: 15px;
+}
+
+/* Custom-bg */
+.custom-bg{
+    margin-top: 50px;
+    background-color: #F24472;
+    width: 100%;
+
+}
+
+.custom-img{
+    background-image: url("https://i.ibb.co/m6bLmgF/desert2.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    
+}
+
+.img-display .vector{
+    text-align: center;
+    margin-left: 130px;
+}
+.img-display{
+    margin-top: 15px;
+}
+.img-display div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-display img{
+    width: 223px;
+    height: 212;
+}
+
+.img-display div div{
+    margin-left: 15px ;
+}
+
+

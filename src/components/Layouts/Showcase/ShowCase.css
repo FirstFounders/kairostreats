@@ -1,0 +1,153 @@
+.showcase-bg{
+    background-image: url("https://i.ibb.co/nwvBjWN/Group-93bg.png");
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* bg-icon */
+.bg-icon .line-1{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.bg-icon .line-2{
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+}
+
+.bg-icon .line-3{
+    position: absolute;
+    right: 20px;
+    top:  60px;
+}
+
+.bg-icon .line-4{ 
+    position: absolute;
+    bottom: 50px;
+    right: 16px;
+}
+
+/* showcase-area */
+.showcase-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+.showcase-area .image-area .white-bg{
+    margin-top: 5rem;
+    margin-left: 7rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    width: 550px;
+    height: 350px;
+}
+
+.showcase-area .image-area .image-bg{
+    padding-left: 0.7rem;
+    padding-top: 0.7rem;
+    margin-bottom: 0;
+}
+
+.svg-area{
+    position: absolute;
+    bottom: 10%;
+    margin-left: 500px;
+}
+
+/* Text-area */
+.text-area{
+    margin-left: 25px;
+    margin-top: 158px;
+}
+
+.text-area .text h1{
+    font-family: 'Playfair Display';
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 69px;
+}
+
+.text-area .text p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+.text-area .text button{
+    margin-top: 25px;
+    padding: 13px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #ef476f;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    font-size: 19px;
+    font-family: 'Roboto Slab', serif;
+    transition: 0.5s;
+}
+
+.text-area .text button:hover {
+    background-color: #ef476f;
+    width: 50%;
+}
+
+
+
+/* Media queries  */
+@media(max-width: 500px) {
+    .bg-icon .line-1{
+        display: none;
+    }
+    
+    .bg-icon .line-2{
+        display: none;
+    }
+    
+    .bg-icon .line-3{
+        display: none;
+    }
+    
+    .bg-icon .line-4{ 
+        display: none;
+    }
+
+    .showcase-area{
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+    
+    }
+
+    .showcase-area .image-area .white-bg{
+        display: none;
+    }
+
+    /* .showcase-area .image-area .image-bg{
+    } */
+
+    .text-area .text h1{
+        font-family: 'Playfair Display';
+        font-size: 25px;
+        font-weight: lighter;
+        line-height: 35px;
+    }
+    
+    .text-area .text p{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 18px;
+    }
+
+    .svg-area{
+        display: none;
+    }
+}

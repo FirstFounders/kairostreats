@@ -1,0 +1,47 @@
+.bg-special{
+    background-color: #ffffff;
+}
+
+.special-heading{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.special-heading img{
+    margin-top: 15px;
+}
+.special-heading h1{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 48px;
+    color: #F24472;
+}
+
+.special-flex{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.special-flex .s-text h3{
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #F24472;
+    font-size: 20px;
+    line-break: 30px;
+}
+
+.special-flex .s-text p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family:  serif;
+}
+
+
+.special-svg{
+    margin-top: 30px;
+    text-align: center;
+}
