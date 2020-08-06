@@ -92,6 +92,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 8em;
+    margin-top: 10px;
 }
 
 .flex2 img{

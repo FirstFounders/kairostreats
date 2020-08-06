@@ -1,4 +1,6 @@
 import React from 'react'
+import './Showcase.css'
+
 
 
 class ShowCase extends React.Component{
@@ -19,7 +21,7 @@ class ShowCase extends React.Component{
                             </div>
                         </div>
                     </div>
-                     <div className="text-area">
+                    <div className="text-area">
                         <div className="text">
                             <h1>Bam-Bam Lala <br></br>Special Offer</h1>
                             <br></br>
