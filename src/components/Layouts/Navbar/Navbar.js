@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
-import './Basket-Overlay/Overlay.css'
+import '../Basket-Overlay/Overlay.css'
 
 import { Drawer} from 'antd';
 
-import '../Layouts/Basket-Overlay/Overlay.css'
+import '../Basket-Overlay/Overlay.css'
+
+import './Navbar.css'
 
 
 function Navbar(){
@@ -23,9 +25,11 @@ function Navbar(){
     
     return( 
                 <nav>
+                    <Link to="/">
                     <ul>
-                        <li><img src={require('../../asset/images/logo.png')} alt="Kairo's" /></li>
+                        <li><img src={require('./images/logo.png')} alt="Kairo's" /></li>
                     </ul>
+                    </Link>
                     <ul>
                         <li className="menu"><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
                             <ul className="sub-menu">
@@ -40,17 +44,17 @@ function Navbar(){
                         </li>
                     </ul>
                     <ul>
-                        <li className="open-modal"><img onClick={showDrawer}  src={require('../../asset/images/basket.png')} alt="Kairo's" /></li>
+                        <li className="open-modal"><img onClick={showDrawer}  src={require('./images/basket.png')} alt="Kairo's" /></li>
                         <Drawer
                         width="700px"
                         placement="right"
                         closable={true}
                         onClose={onClose}
                         visible={visible}
-                         drawerStyle={{
-                         background: "#F24472",
-                         width: "700px"
-                         }
+                        drawerStyle={{
+                        background: "#F24472",
+                        width: "700px"
+                        }
                             
                          }
                         >
@@ -63,7 +67,7 @@ function Navbar(){
                         </div>
                         <div className="overlay-header">
                             <h3>Your Orders</h3>
-                            <span><img src={require('../../asset/images/overlayicon.png')} alt="overlay"/></span>
+                            <span><img src={require('./images/overlayicon.png')} alt="overlay"/></span>
 
                             <div className="model-content">
                                 <h3>Your Basket is empty</h3>

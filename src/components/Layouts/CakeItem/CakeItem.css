@@ -70,11 +70,14 @@
 .cake-text a {
     text-decoration: none;
     color: #ffffff;
-    /* background-color: #fff; */
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     padding: 10px 15px 15px 10px;;
     border: 2px solid #ffffff;
+}
+
+.cake-text a:hover{
+    color: #F24472;
 }
 
 .overlay-left {

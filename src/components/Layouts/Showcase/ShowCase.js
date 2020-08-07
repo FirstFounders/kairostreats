@@ -1,6 +1,8 @@
 import React from 'react'
 import './Showcase.css'
 
+import { Link } from "react-router-dom";
+
 
 
 class ShowCase extends React.Component{
@@ -28,7 +30,9 @@ class ShowCase extends React.Component{
                             <p>Get bambam for your loved ones 
                                 <br></br>this season!</p>
                             <br></br>
-                            <button>Shop!</button>
+                            <Link to="/cakeitem">
+                                <button>Shop!</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
