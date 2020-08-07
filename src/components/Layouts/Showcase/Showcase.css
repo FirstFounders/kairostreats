@@ -1,6 +1,6 @@
 .showcase-bg{
     background-image: url("./images/Group93bg.png");
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@
 
 .bg-icon .line-2{
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     margin:10px;
 }
@@ -36,7 +36,7 @@
 
 .bg-icon .line-4{ 
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     right: 0;
     margin:10px;
 }
@@ -46,8 +46,12 @@
     justify-content: center;
     align-items: flex-end;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: row wrap; 
     margin-bottom: 40px;
+}
+
+.showcase-area{
+    margin-bottom: 50px;
 }
 
 .showcase-area .image-area .white-bg{
@@ -63,34 +67,36 @@
     height: 100%;
     object-fit: cover;
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
 }
 
 .text-area{
-    display: flex;
+    display: flex; 
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: flex-end; 
-    margin-top: 60px;
+    margin-top: 20px; 
 }
 
 /* Text-area */
 .text-area .text h1{
     font-family: 'Playfair Display';
-    font-size: 35px;
+    font-size: 52px;
     font-weight: lighter; 
-    margin-top: 25px; 
+    /* margin-top: 15px;  */
+    line-height: 69px;
 }
 
 .text-area .text p{
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
-    /* margin: 0; */
+    margin-bottom: 35px;
+    line-height: 23px;
 }
 
 .text-area .text button{
-    margin-top: 25px;
+    margin-bottom: 35px;
     padding: 13px;
     border: none;
     outline: none;

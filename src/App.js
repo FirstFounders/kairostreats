@@ -7,6 +7,8 @@ import Footer from './components/Layouts/Footer/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import './asset/css/stylesheet.css'
 import CakeItem from './components/Layouts/CakeItem/CakeItem';
+import ForHer from './components/Pages/For Her/ForHer';
+import ForHim from './components/Pages/ForHim/ForHim';
 
 
 
@@ -17,9 +19,10 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/forher" component={ForHer} />
+          <Route path="/forhim" component={ForHim}/>
           <Route path="/cakeitem" component={CakeItem} />
           <Route path="/customizepage" component={CustomizePage} />
-         
         </Switch>
         <Footer/>
       </div>

@@ -26,10 +26,8 @@ class ShowCase extends React.Component{
                     <div className="text-area">
                         <div className="text">
                             <h1>Bam-Bam Lala <br></br>Special Offer</h1>
-                            <br></br>
                             <p>Get bambam for your loved ones 
                                 <br></br>this season!</p>
-                            <br></br>
                             <Link to="/cakeitem">
                                 <button>Shop!</button>
                             </Link>

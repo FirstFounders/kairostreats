@@ -59,9 +59,14 @@ nav ul:first-child li img{
 }
 
  nav a{
-     display: block;
-     padding: 10px;
+    display: block;
+    padding: 10px;
     color: #000;
+    font-size: 16px;
+}
+
+nav a:hover{
+    color: #ef476f;
 }
 
 .menu{
@@ -77,7 +82,7 @@ nav ul:first-child li img{
     animation: slideUp 0.2s linear;
 }
 
-.sub-menu .pink{
+.sub-menu li{
     color: #ef476f;
 }
 

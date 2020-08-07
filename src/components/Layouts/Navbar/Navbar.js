@@ -31,15 +31,15 @@ function Navbar(){
                     </ul>
                     </Link>
                     <ul>
-                        <li className="menu"><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
+                        <li className="menu"><Link to="https://victoriaagbamoro.g">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
                             <ul className="sub-menu">
-                                <li className="pink"><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Character Cakes</Link></li>
-                                <li><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Cakes for Her</Link></li>
-                                <li><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Cakes for Him</Link></li>
+                                <li className="pink"><Link to="/">Character Cakes</Link></li>
+                                <li><Link to="/forher">Cakes for Her</Link></li>
+                                <li><Link to="/forhim">Cakes for Him</Link></li>
                             </ul>
                         </li>
 
-                        <li className="menu"><Link to="https://victoriaagbamoro.github.io/Cake-WebPage">Customize Cake</Link>
+                        <li className="menu"><Link to="/">Customize Cake</Link>
 
                         </li>
                     </ul>

@@ -79,7 +79,13 @@
     grid-template-columns: 1fr 1fr;
     margin-left: 8em;
     margin-top: 10px;
+    transition: all .3s ease;
 }
+
+.flex1:hover{
+    transform: translateY(4px);
+}
+
 .flex1 .two{
     margin-right: 140px;
 }
@@ -93,6 +99,11 @@
     grid-template-columns: 1fr 1fr;
     margin-left: 8em;
     margin-top: 10px;
+    transition: all .3s ease;
+}
+
+.flex2:hover{
+    transform: translateY(4px);
 }
 
 .flex2 img{
