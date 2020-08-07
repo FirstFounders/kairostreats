@@ -1,7 +1,10 @@
 import React from 'react';
-import Navbar from './components/Layouts/Navbar'
+import Navbar from './components/Layouts/Navbar';
 import Home from './components/Pages/Home';
-import { BrowserRouter } from 'react-router-dom';
+import CustomizePage from './components/Pages/CustomizePage/CustomizePage';
+import Footer from './components/Layouts/Footer/Footer';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './asset/css/stylesheet.css'
 
 
@@ -11,7 +14,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar/>
-        <Home/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/customizepage" component={CustomizePage} />
+        </Switch>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

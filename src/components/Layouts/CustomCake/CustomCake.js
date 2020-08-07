@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './CustomCake.css'
 
 
@@ -13,8 +14,10 @@ export default function CustomCake(){
             <div className="custom-container">
                 <div className="custom-img">
                     <p>Customize a cake to your <br></br>taste and order</p>
-                    <button>Customize</button>
-                
+                    <Link to="/customizepage">
+                        <button>Customize</button>  
+                    </Link>
+
                 </div>
                 <div className="custom-images-cake">
                     <img className="vector" src="https://i.ibb.co/42jKgyt/Group-86vector.png" alt="vector"/>
