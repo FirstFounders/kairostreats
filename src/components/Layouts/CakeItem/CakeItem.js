@@ -1,47 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
+import CakesContext from "../../../contexts/cakes/cakesContext";
 import "./CakeItem.css";
+import { Link } from "react-router-dom";
 
 function CakeItem() {
-  const [cart, setCart] = useState([]);
+  const cakesContext = useContext(CakesContext);
+  useEffect(() => {
+    cakesContext.getAllCakes();
+  }, []);
+  const { cakes } = cakesContext;
 
-  const addToCart = (cake) => {
-    console.log("Add to cart sec");
-    setCart([...cart, cake]);
-  };
-
-  const [cakes] = useState([
-    {
-      image: "https://i.ibb.co/kHjh9PQ/Rectangle-19cake1.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/LJKFG5X/Rectangle-20cake2.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/LJKFG5X/Rectangle-20cake2.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/kHjh9PQ/Rectangle-19cake1.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-  ]);
   return (
     <div className='c-bg'>
       <div className='c-heading'>
@@ -53,12 +21,14 @@ function CakeItem() {
         {cakes.map((cake, idx) => (
           <div key={idx}>
             <div className='cake-container'>
-              <img className='cake-gallery' src={cake.image} alt={cake.name} />
+              <img
+                className='cake-gallery'
+                src={cake.picture}
+                alt={cake.name}
+              />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <a href='#0rdernow' onClick={() => addToCart(cake)}>
-                    {cake.text}
-                  </a>
+                  <Link to='/'>order now</Link>
                 </div>
               </div>
             </div>
