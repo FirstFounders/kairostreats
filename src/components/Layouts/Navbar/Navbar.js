@@ -49,7 +49,7 @@ function Navbar(){
                         <Drawer
                         width="700px"
                         placement="right"
-                        closable={true}
+                        closable={false}
                         onClose={onClose}
                         visible={visible}
                         drawerStyle={{
@@ -60,7 +60,7 @@ function Navbar(){
                          }
                         >
                         <div>
-                         <span className="close-modal-btn">
+                         <span className="close-modal-btn" onClick={()=>onClose()}>
                          <svg  width="21" height="20" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 1L1 22M1 1L21 22" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         </svg> 

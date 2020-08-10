@@ -86,6 +86,10 @@ nav a:hover{
     color: #ef476f;
 }
 
+.close-modal-btn{
+    cursor: pointer;
+}
+
 
 @keyframes slideUp{
     from{

@@ -3,7 +3,7 @@
 .overlay-header{
     display: flex;
     flex-direction: column;
-   text-align: center;
+   /* text-align: center; */
    color: #ffffff;
    align-items: center;
    justify-content: space-evenly;
@@ -28,18 +28,20 @@
     font-family: 'Cormorant Garamond', serif;
 }
 
-.model-content{
-    text-align: center;
-}
+/* .model-content{
+    
+} */
 
 .model-content h3{
     color: #ffffff;
     font-size: 24px;
     line-height: 30px;
     font-family: 'Cormorant Garamond', serif;
+    text-align: center;
 }
 
 .model-content button{
+    text-align: center;
     margin-top: 25px;
     padding: 13px;
     border: none;
