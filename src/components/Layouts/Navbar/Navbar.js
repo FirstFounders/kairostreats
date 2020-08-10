@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
-import '../Basket-Overlay/Overlay.css'
 
 import { Drawer} from 'antd';
 
-import '../Basket-Overlay/Overlay.css'
+// import '../Cart/Cart.css'
+
+import Cart from '../Cart/Cart'
 
 import './Navbar.css'
 
@@ -65,16 +66,8 @@ function Navbar(){
                         </svg> 
                         </span>
                         </div>
-                        <div className="overlay-header">
-                            <h3>Your Orders</h3>
-                            <span><img src={require('./images/overlayicon.png')} alt="overlay"/></span>
-
-                            <div className="model-content">
-                                <h3>Your Basket is empty</h3>
-                                <Link to="/cakeitem">
-                                    <button>Shop Now</button>
-                                </Link>
-                            </div>
+                        <div>
+                            <Cart/>
                         </div>
                         </Drawer>
                     </ul>
