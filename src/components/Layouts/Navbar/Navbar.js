@@ -31,7 +31,7 @@ function Navbar(){
                     </ul>
                     </Link>
                     <ul>
-                        <li className="menu"><Link to="https://victoriaagbamoro.g">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
+                        <li className="menu"><Link to="/">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
                             <ul className="sub-menu">
                                 <li className="pink"><Link to="/">Character Cakes</Link></li>
                                 <li><Link to="/forher">Cakes for Her</Link></li>
@@ -39,7 +39,7 @@ function Navbar(){
                             </ul>
                         </li>
 
-                        <li className="menu"><Link to="/">Customize Cake</Link>
+                        <li className="menu"><Link to="/customizepage">Customize Cake</Link>
 
                         </li>
                     </ul>
