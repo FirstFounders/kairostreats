@@ -78,7 +78,7 @@ function CustomizePage() {
     return (
         <div className='c-bg'>
             <div className='c-heading'>
-                <h1>Creamy Cake</h1>
+                <h1>Customize your Cake</h1>
                 <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
             </div>
 
