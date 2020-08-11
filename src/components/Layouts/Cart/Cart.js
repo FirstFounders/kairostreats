@@ -3,6 +3,7 @@ import React, { useState, Fragment } from 'react'
 import {Link} from 'react-router-dom'
 
 import CartItem from './CartItem/CartItem'
+import Cartform from "./Cartform/Cartform"
 
 import  './Cart.css'
 
@@ -27,6 +28,7 @@ export default function Cart(){
                             <h2>Total</h2>
                             <p>45000</p>
                             </Fragment>)}
+                            <Cartform/>
                     </div>
             </div>
         </div>
