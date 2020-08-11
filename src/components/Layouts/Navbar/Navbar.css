@@ -85,9 +85,16 @@ nav a:hover{
 .sub-menu li{
     color: #ef476f;
 }
-
+.close-bg{
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F57093;
+    border-radius: 50%;
+}
 .close-modal-btn{
     cursor: pointer;
+    
 }
 
 

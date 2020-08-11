@@ -20,13 +20,14 @@ export default function Cart(){
                             <Fragment>
                             <h3>Your Basket is empty</h3>
                             <Link to="/cakeitem">
-                            <button>Shop Now</button>
+                            <button className="shop">Shop Now</button>
                             </Link>
                         </Fragment>
                         ):(<Fragment>
                             {cart.map(item=>(<CartItem/>))}
                             <h2>Total</h2>
                             <p>45000</p>
+                            <button className="checkout">Check Out</button>
                             </Fragment>)}
                             <Cartform/>
                     </div>

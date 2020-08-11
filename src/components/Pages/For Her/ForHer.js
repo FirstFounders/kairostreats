@@ -145,7 +145,8 @@ function ForHer(){
                 <h1>Cake For Her</h1>
                 <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
             </div>
-
+            
+            <h2 className= "htag">Select a cake</h2>
             <div className="her-display">
                 {forHers.map((forHer, id) => (
                     <div key={id}>

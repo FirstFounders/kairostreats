@@ -25,6 +25,9 @@
     
 }
 
+.special-flex img{
+    cursor: pointer;
+}
 .special-flex .s-text h3{
     text-align: center;
     font-family: 'Cormorant Garamond', serif;

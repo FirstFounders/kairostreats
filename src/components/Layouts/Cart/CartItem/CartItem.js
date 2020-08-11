@@ -11,9 +11,11 @@ export default function CartItem(){
                 <div>
                     <img src={require('../images/cake.png')} alt=""/> 
                 </div>
-                <div>
+                <div className="cart-container">
+                    <div>
                     <h4>Vanilla flavour ginger cake</h4>
-                    <p className="underline">Category</p>
+                    <h5 className="category">Category</h5>
+                    </div>
                     <div className="cart-cal">
                         <p>-</p>
                         <p>1</p>
@@ -34,10 +36,16 @@ export default function CartItem(){
                     <h4>Edit order</h4>
                     <br>
                     </br>
+                    <br>
+                    </br>
                     <p>N 23,000</p>
                 </div>
 
+                
+
             </div>
+
+            
         </div>
     )
 

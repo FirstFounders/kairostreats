@@ -71,7 +71,7 @@ function ForHim(){
                 <h1>Cake For Him</h1>
                 <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
             </div>
-
+            <h2 className= "htag">Select a cake</h2>
             <div className="him-display">
                 {forHims.map((forHim, id) => (
                     <div key={id}>
