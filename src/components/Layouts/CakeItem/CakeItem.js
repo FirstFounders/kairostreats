@@ -28,7 +28,7 @@ function CakeItem() {
               />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <Link to='/'>order now</Link>
+                  <Link to='/ordernow'>order now</Link>
                 </div>
               </div>
             </div>

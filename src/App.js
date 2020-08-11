@@ -11,6 +11,7 @@ import ForHer from "./components/Pages/For Her/ForHer";
 import ForHim from "./components/Pages/ForHim/ForHim";
 
 import CakesState from "./contexts/cakes/CakesState";
+import OrderNow from "./components/Pages/OrderNow/OrderNow";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/forhim' component={ForHim} />
             <Route path='/cakeitem' component={CakeItem} />
             <Route path='/customizepage' component={CustomizePage} />
+            <Route path='/ordernow' component={OrderNow}/>
           </Switch>
           <Footer />
         </div>
