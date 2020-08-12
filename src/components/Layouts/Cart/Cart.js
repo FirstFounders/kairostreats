@@ -8,7 +8,7 @@ import Cartform from "./Cartform/Cartform"
 import  './Cart.css'
 
 export default function Cart(){
-    const [cart, setCart] = useState([1,,2,2,])
+    const [cart, setCart] = useState([1,2,2,])
     return(
         <div>
             <div className="overlay-header">
