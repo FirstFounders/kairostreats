@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import "./Special.css";
 import CakesContext from "../../../contexts/cakes/cakesContext";
 
+
 import {Link} from 'react-router-dom'
 
 function Special() {
@@ -23,7 +24,7 @@ function Special() {
         <div className='special-flex'>
           {recommended_cakes.map((cake) => (
             <div>
-              <Link to="/specialpage">
+              <Link to="/SpecialPage">
                 <img
                 src='https://i.ibb.co/1JJyMhk/Ellipse-14cake2.png'
                 alt='Ellipse-14cake2'

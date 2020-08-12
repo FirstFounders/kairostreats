@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CustomizePage.css";
+import { Link } from "react-router-dom";
 
 function CustomizePage() {
   const [cart, setCart] = useState([]);
@@ -90,9 +91,10 @@ function CustomizePage() {
                         <img className='cake-gallery' src={cake.image} alt={cake.name} />
                         <div className='cake-overlay overlay-left'>
                             <div className='cake-text'>
-                                <a href='#0rdernow' onClick={() => addToCart(cake)}>
-                                    {cake.text}
-                                </a>
+                              
+                                <Link to='/ordernow' onClick={() => addToCart(cake)}>
+                                  {cake.text}
+                                </Link>
                             </div>
                         </div>
                     </div>
