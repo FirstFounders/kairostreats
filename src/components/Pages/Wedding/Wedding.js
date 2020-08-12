@@ -3,19 +3,20 @@ import CakesContext from "../../../contexts/cakes/cakesContext";
 import { Link } from "react-router-dom";
 
 
-function SpecialPage(){
+function Wedding(){
     const cakesContext = useContext(CakesContext);
     useEffect(() => {
     cakesContext.getAllCakes();
 }, []);
     const { cakes } = cakesContext;
+
     return(
         <div>
             <div className='c-heading'>
-                <h1>Special Cake</h1>
+                <h1>Wedding Cake</h1>
                 <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
             </div>
-            
+
             <h2 className= "htag">Select a cake</h2>
             <div className='cake-display'>
                 {cakes.map((cake, idx) => (
@@ -45,4 +46,4 @@ function SpecialPage(){
     )
 }
 
-export default SpecialPage
+export default Wedding;

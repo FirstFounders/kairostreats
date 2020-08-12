@@ -12,6 +12,9 @@ import ForHim from "./components/Pages/ForHim/ForHim";
 
 import CakesState from "./contexts/cakes/CakesState";
 import OrderNow from "./components/Pages/OrderNow/OrderNow";
+import Birthday from "./components/Pages/Birthdays/Birthday";
+import Wedding from "./components/Pages/Wedding/Wedding";
+import SpecialPage from "./components/Pages/SpecialPage/SpecialPage";
 
 function App() {
   return (
@@ -23,9 +26,12 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route path='/forher' component={ForHer} />
             <Route path='/forhim' component={ForHim} />
+            <Route path='/birthday' component={Birthday} />
+            <Route path='/wedding' component={Wedding} />
             <Route path='/cakeitem' component={CakeItem} />
             <Route path='/customizepage' component={CustomizePage} />
             <Route path='/ordernow' component={OrderNow}/>
+            <Route path='/specialpage' component={SpecialPage}/>
           </Switch>
           <Footer />
         </div>

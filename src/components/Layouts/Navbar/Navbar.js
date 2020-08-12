@@ -36,8 +36,8 @@ function Navbar(){
                             <ul className="sub-menu">
                                 <li><Link to="/forher">Cakes for Her</Link></li>
                                 <li><Link to="/forhim">Cakes for Him</Link></li>
-                                <li><Link to="/">Birthday cakes</Link></li>
-                                <li><Link to="/">Wedding cakes</Link></li>
+                                <li><Link to="/birthday">Birthday cakes</Link></li>
+                                <li><Link to="/wedding">Wedding cakes</Link></li>
                             </ul>
                         </li>
 

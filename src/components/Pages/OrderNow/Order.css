@@ -1,11 +1,10 @@
 .order-container{
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: auto;
-    width: 90%;
-    /* height: 80%;  */
+    margin-top: 50px ;
+    margin-left: 50px;
+    flex-direction: row;
+
 }
 
 .order-content{
@@ -44,7 +43,6 @@
     outline: none;
     padding: 0 25px 5px;
     border: 1px solid #F24472;
-    box-sizing: border-box;
     border-radius: 5px;
     background-color: #ffffff;
 }
@@ -72,7 +70,6 @@
     outline: none;
     border: 1px solid #F24472;
     background-color: #ffffff;
-    box-sizing: border-box;
     border-radius: 5px;
     padding: 0px 12px 5px;
     font-style: normal;
@@ -101,7 +98,6 @@
     margin-top: 30px;
     border: 1px solid #F24472;
     background-color: #ffffff;
-    box-sizing: border-box;
     border-radius: 5px;
     padding: 0px 25px 5px;
     font-style: normal;
@@ -122,7 +118,6 @@
     outline: none;
     border: 1px solid #F24472;
     background-color: #ffffff;
-    box-sizing: border-box;
     border-radius: 5px;
     padding: 0px 25px 5px;
     font-style: normal;
@@ -138,7 +133,7 @@
 }
 
 .add-cart{
-    margin-bottom: 110px;
+    margin-bottom: 120px;
 }
 
 .total{
@@ -182,6 +177,7 @@
 }
 
 .add-to-cart button{
+    margin-top: 20px;
     text-align: center;
     padding: 0 20px 6px;
     border: none;
