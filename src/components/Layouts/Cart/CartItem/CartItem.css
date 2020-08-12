@@ -56,43 +56,6 @@
     margin-top: 20px;
 }
 
-.cart-cal p:not(:nth-child(2)){
-    cursor: pointer;
-}
-
-.cart-cal p:nth-child(1){
-    background-color: #F24472;
-    width: 22px;
-    height: 22px; 
-    border-radius: 50%;
-    font-size: 40px;
-    line-height: 10px;
-    margin: 0;
-    text-align: center;
-}
-
-
-.cart-cal p:nth-child(2){
-    padding: 0 20px;
-}
-
-
-
-.cart-cal p:nth-child(3){
-    background-color: #F24472;
-    width: 22px;
-    height: 22px; 
-    border-radius: 50%;
-    font-size: 25px;
-    line-height: 15px;
-    margin: 0;
-    text-align: center;
-}
-
-.cart-cal p:nth-child(3){
-    background-color: #F24472;
-}
-
 
 
 .remove1{
@@ -143,5 +106,34 @@
     font-family: 'Cormorant Garamond', serif;
     box-shadow: -12px 10px 10px 2px rgb(0.4, 0.4, 0.4, 0.4);
 }
+
+.cart-cal .one{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.cart-cal .minus{
+    cursor: pointer;
+    margin-right: 1em;
+    padding: 0 5px;
+    background-color: #F24472;
+    border-radius: 50%;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    
+}
+
+.cart-cal .plus{
+    cursor: pointer;
+    margin-left: 1em;
+    padding: 0 5px;
+    background-color: #F24472;
+    border-radius: 50%;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+}
+
 
 /* Media Query */

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom'
 
 import './ForHim.css'
 
@@ -79,9 +80,7 @@ function ForHim(){
                         <img className="him-gallery" src={forHim.image} alt={forHim.name}/>
                         <div className="him-overlay overlay-left">
                         <div className="him-text">
-                            <a href='#ordernow'onClick={() => addTocart(forHim)}>
-                                {forHim.text}
-                            </a>
+                            <Link to='/ordernow'>order now</Link>
                         </div>
                         </div>
                         </div>

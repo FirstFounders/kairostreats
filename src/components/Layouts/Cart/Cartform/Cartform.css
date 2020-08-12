@@ -20,7 +20,8 @@
     font-size: 16px;
     outline: none;
     border: none;
-    outline-color: #ffffff; 
+    outline-color: #ffffff;
+    color: #000; 
 }
 .submitField{
     margin-top: 45px;

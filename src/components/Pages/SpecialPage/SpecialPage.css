@@ -1,0 +1,119 @@
+.c-bg{
+    background-color: #ffffff;
+}
+
+.c-heading{
+    margin-top: 55px;
+    text-align: center;
+
+}
+
+.c-heading h1{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 48px;
+    color: #F24472;
+}
+
+.c-heading img{
+    margin-top: 15px;
+}
+
+/* Cake Display */
+.cake-display{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    width: 90vw;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.cake-container {
+    position: relative;
+    width: 300px;
+    height: 271px;
+    display: inline-block;
+    transition: all .3s ease;
+    box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
+}
+
+.cake-gallery {
+    display: block;
+    width: 300px;
+    height: 271px;
+    box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
+}
+
+.cake-overlay {
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.cake-container:hover .cake-overlay {
+    opacity: 1;
+}
+
+.cake-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.cake-text a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 15px 15px 10px;;
+    border: 2px solid #ffffff;
+}
+
+.cake-text a:hover{
+    color: #F24472;
+}
+
+.overlay-left {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cake-container:hover .overlay-left {
+    width: 100%;
+}
+.cake-container:hover {
+    transform: translateY(4px);
+}
+
+.cake-content h5{
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cake-content p{
+    font-family: 'Cormorant Garamond';
+    color: #888;
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: underline;
+}
+
+.cake-content h4{
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: serif;
+
+}
+

@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import "./ForHer.css"
 
+import {Link} from 'react-router-dom'
+
 
 function ForHer(){
     const [herdata, setHerData] = useState([]);
@@ -154,9 +156,7 @@ function ForHer(){
                             <img className="her-gallery" src={forHer.image} alt={forHer.name}/>
                             <div className="her-overlay overlay-left">
                             <div className="her-text">
-                                <a href='#ordernow'onClick={() => addTocart(forHer)}>
-                                    {forHer.text}
-                                </a>
+                            <Link to='/ordernow'>order now</Link>
                             </div>
                             </div>
                         </div>
