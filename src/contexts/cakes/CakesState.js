@@ -6,10 +6,10 @@ import {
   GET_CAKES,
   GET_RECOMMENDED_CAKES,
   SET_LOADING,
+  GET_CAKE,
 } from "../ActionTypes";
 
 const CakesState = (props) => {
-
   const initialState = {
     cakes: [],
     recommended_cakes: [],

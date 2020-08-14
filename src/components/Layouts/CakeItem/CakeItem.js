@@ -8,11 +8,10 @@ function CakeItem() {
   const cakesContext = useContext(CakesContext);
   const cartContext = useContext(CartContext);
 
-  
   useEffect(() => {
     cakesContext.getAllCakes();
   }, []);
-  const {addProduct} = cartContext;
+  const { addProduct } = cartContext;
   const { cakes } = cakesContext;
 
   return (
@@ -33,7 +32,7 @@ function CakeItem() {
               />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <Link to='' onClick={addProduct}>order now</Link>
+                  <Link to={`/product/${cake.id}`}>order now</Link>
                 </div>
               </div>
             </div>

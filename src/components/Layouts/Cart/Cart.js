@@ -1,13 +1,18 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useContext } from "react";
 
 import { Link } from "react-router-dom";
 
 import CartItem from "./CartItem/CartItem";
+import Cartform from "./Cartform/Cartform";
+import CartContext from "../../../contexts/cart/cartContext";
 
 import "./Cart.css";
 
 export default function Cart() {
-  const [cart, setCart] = useState([]);
+  const cartContext = useContext(CartContext);
+
+  const { cart, totalPrice } = cartContext;
+  // const [cart, setCart] = useState([1, 2, 2]);
   return (
     <div>
       <div className='overlay-header'>
@@ -21,18 +26,20 @@ export default function Cart() {
             <Fragment>
               <h3>Your Basket is empty</h3>
               <Link to='/cakeitem'>
-                <button>Shop Now</button>
+                <button className='shop'>Shop Now</button>
               </Link>
             </Fragment>
           ) : (
             <Fragment>
               {cart.map((item) => (
-                <CartItem />
+                <CartItem product={item} />
               ))}
               <h2>Total</h2>
-              <p>45000</p>
+              <p>{totalPrice}</p>
+              <button className='checkout'>Check Out</button>
             </Fragment>
           )}
+          <Cartform />
         </div>
       </div>
     </div>

@@ -34,9 +34,10 @@ function Navbar(){
                     <ul>
                         <li className="menu"><Link to="/">Categories <i class="fa fa-caret-down" aria-hidden="true"></i></Link>
                             <ul className="sub-menu">
-                                <li className="pink"><Link to="/">Character Cakes</Link></li>
                                 <li><Link to="/forher">Cakes for Her</Link></li>
                                 <li><Link to="/forhim">Cakes for Him</Link></li>
+                                <li><Link to="/birthday">Birthday cakes</Link></li>
+                                <li><Link to="/wedding">Wedding cakes</Link></li>
                             </ul>
                         </li>
 
@@ -59,9 +60,9 @@ function Navbar(){
                             
                          }
                         >
-                        <div>
+                        <div className="close-bg">
                          <span className="close-modal-btn" onClick={()=>onClose()}>
-                         <svg  width="21" height="20" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <svg  width="20" height="20" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 1L1 22M1 1L21 22" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         </svg> 
                         </span>

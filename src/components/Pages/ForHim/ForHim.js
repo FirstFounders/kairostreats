@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom'
 
 import './ForHim.css'
 
@@ -71,7 +72,7 @@ function ForHim(){
                 <h1>Cake For Him</h1>
                 <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
             </div>
-
+            <h2 className= "htag">Select a cake</h2>
             <div className="him-display">
                 {forHims.map((forHim, id) => (
                     <div key={id}>
@@ -79,9 +80,7 @@ function ForHim(){
                         <img className="him-gallery" src={forHim.image} alt={forHim.name}/>
                         <div className="him-overlay overlay-left">
                         <div className="him-text">
-                            <a href='#ordernow'onClick={() => addTocart(forHim)}>
-                                {forHim.text}
-                            </a>
+                            <Link to='/ordernow'>order now</Link>
                         </div>
                         </div>
                         </div>

@@ -1,13 +1,14 @@
-.Him-area{
+.c-bg{
     background-color: #ffffff;
 }
 
-.Him-heading{
-    margin-top: 30px;
+.c-heading{
+    margin-top: 55px;
     text-align: center;
+
 }
 
-.Him-heading h1{
+.c-heading h1{
     font-family: 'Playfair Display';
     font-size: 36px;
     font-weight: lighter;
@@ -15,11 +16,12 @@
     color: #F24472;
 }
 
-.him-heading img{
+.c-heading img{
     margin-top: 15px;
 }
 
-.him-display{
+/* Cake Display */
+.cake-display{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2px;
@@ -29,7 +31,7 @@
     margin-top: 50px;
 }
 
-.him-container{
+.cake-container {
     position: relative;
     width: 300px;
     height: 271px;
@@ -38,27 +40,25 @@
     box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
 }
 
-.him-gallery {
+.cake-gallery {
     display: block;
     width: 300px;
     height: 271px;
     box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
-    object-fit: cover;
-    object-position: center;
 }
 
-.him-overlay {
+.cake-overlay {
     position: absolute;
     transition: all .3s ease;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.him-container:hover .him-overlay {
+.cake-container:hover .cake-overlay {
     opacity: 1;
 }
 
-.him-text {
+.cake-text {
     color: #fff;
     position: absolute;
     top: 50%;
@@ -67,7 +67,7 @@
     font-size: 20px;
 }
 
-.him-text a {
+.cake-text a {
     text-decoration: none;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
@@ -76,7 +76,7 @@
     border: 2px solid #ffffff;
 }
 
-.him-text a:hover{
+.cake-text a:hover{
     color: #F24472;
 }
 
@@ -87,17 +87,33 @@
     left: 0;
 }
 
-.him-container:hover .overlay-left {
+.cake-container:hover .overlay-left {
     width: 100%;
 }
-.him-container:hover {
+.cake-container:hover {
     transform: translateY(4px);
 }
 
-.him-content h5{
+.cake-content h5{
     font-family: 'Cormorant Garamond', serif;
-    line-height: 35px;
+    line-height: 25px;
     font-size: 16px;
     font-weight: bold;
+}
+
+.cake-content p{
+    font-family: 'Cormorant Garamond';
+    color: #888;
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: underline;
+}
+
+.cake-content h4{
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: serif;
+
 }
 

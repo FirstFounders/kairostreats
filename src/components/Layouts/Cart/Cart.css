@@ -40,14 +40,14 @@
     text-align: center;
 }
 
-.model-content button{
+.model-content .shop{
     text-align: center;
     margin-top: 25px;
     padding: 13px;
     border: none;
     outline: none;
     font-weight: bold;
-    color: #F24472;;
+    color: #F24472;
     background-color: #ffffff;
     text-align: center;
     cursor: pointer;
@@ -57,6 +57,8 @@
     line-height: 30px;
     font-family: 'Cormorant Garamond', serif;
 }
+
+
 
 /* Open-Modal */
 .open-modal{

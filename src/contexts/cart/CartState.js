@@ -7,7 +7,7 @@ import {
   CLEAR_CART,
 } from "../ActionTypes";
 import { CartReducer } from "./cartReducer";
-import CartContext from "../cakes/cakesContext";
+import CartContext from "./cartContext";
 
 const CartState = (props) => {
   const storage = localStorage.getItem("cart")
