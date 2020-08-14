@@ -1,7 +1,5 @@
 import {
   GET_CAKES,
-  GET_CAKE,
-  GET_CATEGORY,
   SET_LOADING,
   GET_RECOMMENDED_CAKES,
 } from "../ActionTypes";

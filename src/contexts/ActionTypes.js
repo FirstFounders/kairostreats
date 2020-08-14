@@ -2,7 +2,16 @@ export const GET_CAKES = "GET_CAKES";
 export const GET_RECOMMENDED_CAKES = "GET_RECOMMENDED_CAKES";
 export const GET_CAKE = "GET_CAKES";
 export const GET_CATEGORY = "GET_CATEGORY";
+
+// CART
 export const GET_CART = "GET_CART";
-export const SET_LOADING = "SET_LOADING";
+export const ADD_ITEM_TO_CART = "ADD_ITEM_TO_CART";
+export const REMOVE_ITEM_FROM_CART = "REMOVE_ITEM_FROM_CART";
+export const INCREASE_ITEM_QUANTITY = "INCREASE_ITEM_QUANTITY";
+export const DECREASE_ITEM_QUANTITY = "DECREASE_ITEM_QUANTITY";
+export const CLEAR_CART = "CLEAR_CART";
+
+
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
+export const SET_LOADING = 'SET_LOADING';

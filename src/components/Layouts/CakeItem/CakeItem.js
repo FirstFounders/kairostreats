@@ -1,13 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import CakesContext from "../../../contexts/cakes/cakesContext";
+import CartContext from "../../../contexts/cart/cartContext";
 import "./CakeItem.css";
 import { Link } from "react-router-dom";
 
 function CakeItem() {
   const cakesContext = useContext(CakesContext);
+  const cartContext = useContext(CartContext);
+
+  
   useEffect(() => {
     cakesContext.getAllCakes();
   }, []);
+  const {addProduct} = cartContext;
   const { cakes } = cakesContext;
 
   return (
@@ -28,7 +33,7 @@ function CakeItem() {
               />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <Link to='/'>order now</Link>
+                  <Link to='' onClick={addProduct}>order now</Link>
                 </div>
               </div>
             </div>

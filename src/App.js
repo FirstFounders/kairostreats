@@ -11,24 +11,27 @@ import ForHer from "./components/Pages/For Her/ForHer";
 import ForHim from "./components/Pages/ForHim/ForHim";
 
 import CakesState from "./contexts/cakes/CakesState";
+import CartState from "./contexts/cart/CartState";
 
 function App() {
   return (
-    <CakesState>
-      <BrowserRouter>
-        <div className='App'>
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/forher' component={ForHer} />
-            <Route path='/forhim' component={ForHim} />
-            <Route path='/cakeitem' component={CakeItem} />
-            <Route path='/customizepage' component={CustomizePage} />
-          </Switch>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </CakesState>
+    <CartState>
+      <CakesState>
+        <BrowserRouter>
+          <div className='App'>
+            <Navbar />
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/forher' component={ForHer} />
+              <Route path='/forhim' component={ForHim} />
+              <Route path='/cakeitem' component={CakeItem} />
+              <Route path='/customizepage' component={CustomizePage} />
+            </Switch>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </CakesState>
+    </CartState>
   );
 }
 
