@@ -1,13 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import CakesContext from "../../../contexts/cakes/cakesContext";
+import CartContext from "../../../contexts/cart/cartContext";
 import { Link } from "react-router-dom";
 
 
 function Wedding(){
     const cakesContext = useContext(CakesContext);
+    const cartContext = useContext(CartContext);
+
     useEffect(() => {
     cakesContext.getAllCakes();
 }, []);
+    const { addProduct } = cartContext;
     const { cakes } = cakesContext;
 
     return(
@@ -29,7 +33,7 @@ function Wedding(){
                 />
                 <div className='cake-overlay overlay-left'>
                     <div className='cake-text'>
-                        <Link to='/ordernow'>order now</Link>
+                        <Link to={`/product/${cake.id}`}>order now</Link>
                     </div>
                 </div>
                 </div>
