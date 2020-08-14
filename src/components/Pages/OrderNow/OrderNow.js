@@ -21,7 +21,7 @@ export default function OrderNow(){
                         <button>Chocolate</button>
                         <button>Red Velvet</button>
                     </div>
-                    <p>Select size</p>
+                    <p className="select">Select size</p>
                     <div className="flavor-size">
                         <button>8"</button>
                         <button>10"</button>
@@ -30,7 +30,7 @@ export default function OrderNow(){
                     <button className="add-note">Add note <span className="svg-plus"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.6121 7.53169H0V4.6121H4.6121V0H7.54579V4.6121H12.1579V7.53169H7.54579V12.1579H4.6121V7.53169Z" fill="#F24472"/>
                     </svg></span></button>
-                    <p>Upload an image that you want printed on the cake(Optional)</p>
+                    <p className="upload">Upload an image that you want printed on the cake(Optional)</p>
                     <button className="upload-image">Upload picture<span className="svg-plus2"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.6121 7.53169H0V4.6121H4.6121V0H7.54579V4.6121H12.1579V7.53169H7.54579V12.1579H4.6121V7.53169Z" fill="#F24472"/>
                     </svg></span></button>

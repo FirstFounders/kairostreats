@@ -119,3 +119,22 @@
 
 }
 
+
+@media(max-width: 500px){
+    .cake-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c-heading h1{
+        font-size: 25px;
+        line-height: 30px;
+        
+    }
+
+    .c-heading img{
+        margin-top: 5px;
+    }
+}

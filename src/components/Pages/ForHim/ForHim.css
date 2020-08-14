@@ -101,3 +101,26 @@
     font-weight: bold;
 }
 
+
+/* Media Query */
+
+@media(max-width: 500px){
+    .Him-heading h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    .him-heading img{
+        margin-top: 5px;
+    }
+
+    .him-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+

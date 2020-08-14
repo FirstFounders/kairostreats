@@ -181,12 +181,17 @@
     .showcase-area{
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        /* height: 70vh; */
     
     }
 
     .showcase-area .image-area .white-bg{
-        display: none;
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        position: relative;
+        top: 15px;
+        left: 15px;
     }
 
     /* .showcase-area .image-area .image-bg{
@@ -206,6 +211,26 @@
 
     .svg-area{
         display: none;
+    }
+
+    .text-area .text button{
+        margin-bottom: 35px;
+        padding: 13px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #ef476f;
+        text-align: center;
+        cursor: pointer;
+        width: 40%;
+        font-size: 19px;
+        font-family: 'Roboto Slab', serif;
+        transition: 0.5s;
+    }
+    
+    .text-area .text button:hover {
+        background-color: #ef476f;
+        width: 50%;
     }
 }
 

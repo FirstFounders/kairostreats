@@ -137,3 +137,16 @@
 
 
 /* Media Query */
+/* @media(max-width: 500px){
+    .cart-sec{
+        background-color: #BF0D3C;
+        border-radius: 5px;
+        width: 400px;
+        height: 125px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: nowrap;
+    }
+} */

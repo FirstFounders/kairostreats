@@ -191,5 +191,72 @@
     font-family: 'Cormorant Garamond', serif;
 }
 
+@media(max-width: 500px){
+    .order-container{
+        /* margin-top: 50px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .order-content{
+        margin-left: 20px;
+        /* margin-top: 180px; */
+    }
+
+    .order-content h4{
+        font-size: 18px;
+        line-height: 19px;
+    }
+    
+    .order-content h5{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .order-content p{
+        font-size: 15px;
+        font-style: normal;
+        line-height: 19px;
+    }
+
+    .flavor-category{
+        display: inline-block;
+    }
+
+    .flavor-category button{
+        line-height: 20px;
+        font-size: 14px;
+        padding: 0 5px 5px;
+    }
+
+    .flavor-size button:nth-child(1){
+        margin-left: 0.5em;
+    }
+    
+    .flavor-size button:nth-child(2){
+        margin-left: 0.5em;
+    }
+
+    .flavor-size button{
+        padding: 0px 10px 5px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+    }
+
+    .select{
+        margin-top: 10px;
+    }
+
+    .upload{
+        margin-top: 10px;
+    }
+
+    
+    
+}
 
 

@@ -114,3 +114,43 @@
     margin-right: 140px;
 }
 
+/* Media Query */
+@media(max-width: 500px){
+    .custom-heading h1{
+        font-size: 25px;
+        line-height: 30px;
+        
+    }
+
+    .custom-heading img{
+        margin-top: 5px;
+    }
+
+    .custom-images-cake{
+        display: none;
+        
+    }
+
+    .custom-img p{
+        text-align: center;
+        margin-top: 80px;
+        color: #ffffff;
+        font-size: 30px;
+        font-family: 'Playfair Display';
+        /* line-height: 60px; */
+    }
+    
+    .custom-img button{
+        width: 40%;
+    }
+    
+    .custom-img button:hover {
+        background-color: #ef476f;
+        width: 50%;
+    }
+
+    .custom-img{
+        width: 100%;
+    }
+    
+}
