@@ -19,7 +19,7 @@ function Special() {
         <h1>Specials</h1>
         <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
       </div>
-
+  
       <div className='overall-special'>
         <div className='special-flex'>
           {recommended_cakes.map((cake) => (
@@ -37,6 +37,7 @@ function Special() {
             </div>
           ))}
         </div>
+        
 
         <div className='special-svg'>
           <div className='move backward'>
