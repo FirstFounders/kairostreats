@@ -1,18 +1,17 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer } from "react";
 import Axios from "axios";
 import CakesContext from "./cakesContext";
 import CakesReducer from "./cakesReducer";
 import {
   GET_CAKES,
   GET_RECOMMENDED_CAKES,
-  GET_CAKE,
-  GET_CATEGORY,
   SET_LOADING,
+  GET_CAKE,
 } from "../ActionTypes";
 
 const CakesState = (props) => {
   const initialState = {
-    cakes:[],
+    cakes: [],
     recommended_cakes: [],
     cake: {},
     category: [],
@@ -25,16 +24,13 @@ const CakesState = (props) => {
   const getAllCakes = async () => {
     setLoading();
     const response = await Axios.get("/products");
-    // return response.data;
-    console.log(response.data)
+    console.log(response.data);
     dispatch({ type: GET_CAKES, payload: response.data.data });
   };
 
   const getRecommendedCakes = async () => {
     setLoading();
     const response = await Axios.get("/recommended/products");
-    // return response.data;
-    
     dispatch({ type: GET_RECOMMENDED_CAKES, payload: response.data.data });
   };
 

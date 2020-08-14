@@ -1,10 +1,4 @@
-import {
-  GET_CAKES,
-  GET_CAKE,
-  GET_CATEGORY,
-  SET_LOADING,
-  GET_RECOMMENDED_CAKES,
-} from "../ActionTypes";
+import { GET_CAKES, SET_LOADING, GET_RECOMMENDED_CAKES } from "../ActionTypes";
 
 export default (state, action) => {
   switch (action.type) {
