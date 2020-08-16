@@ -30,30 +30,43 @@ export default function OrderNow(props) {
           <h5>{product.category}</h5>
           <div className='flavor-category'>
             <p>Select flavour</p>
-            <Radio.Group defaultValue='' buttonStyle='solid'>
+            {/* <Radio.Group  defaultValue='' buttonStyle='solid'>
               {product.flavours &&
                 product.flavours.map((flav) => (
                   <Radio.Button value={flav.flavour} key={flav.flavour}>
                     {flav.flavour}
                   </Radio.Button>
                 ))}
-            </Radio.Group>
+            </Radio.Group> */}
+
+            <div classname="button-group-pills text-center" data-toggle="buttons">
+            {product.flavours &&
+              product.flavours.map((flav) => (
+                  <button value={flav.flavour} key={flav.flavour} > {flav.flavour}</button>
+           ))}
+            </div>
           </div>
           <p>Select size</p>
           <div className='flavor-size'>
-            <Radio.Group defaultValue='' buttonStyle='solid'>
-              {product.size &&
-                product.size.map((sz) => (
-                  <Radio.Button value={sz} key={sz}>
-                    {sz}
+            <Radio.Group defaultValue={product.size8} buttonStyle='solid'>
+                  <Radio.Button value={product.size8}>
+                    8"
                   </Radio.Button>
-                ))}
+
+                  <Radio.Button value={product.size10}>
+                    10"
+                  </Radio.Button>
+
+                  <Radio.Button value={product.size12}>
+                    12"
+                  </Radio.Button>
+
             </Radio.Group>
           </div>
-          {product.isCustomizable === 1 && (
+          {/* {product.isCustomizable === 1 && ( ) */}
             <Fragment>
               <button className='add-note'>
-                Add note{" "}
+                Add note
                 <span className='svg-plus'>
                   <svg
                     width='13'
@@ -88,9 +101,9 @@ export default function OrderNow(props) {
                 </span>
               </button>
             </Fragment>
-          )}
+          
           <div className='add-cart'>
-            <p className='total'>N {product.price}</p>
+            <p className='total'>N {product.size8}</p>
             <span className='minus'>
               <svg
                 width='12'

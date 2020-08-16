@@ -42,7 +42,8 @@
   line-height: 19px;
 }
 
-.cart-sec img {
+.cart-img img {
+  border-radius: 50%;
   width: 90px;
   height: 90px;
   margin-right: 20px;
@@ -132,16 +133,16 @@
 }
 
 /* Media Query */
-/* @media(max-width: 500px){
-    .cart-sec{
-        background-color: #BF0D3C;
-        border-radius: 5px;
-        width: 400px;
-        height: 125px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-flow: nowrap;
-    }
-} */
+ @media(max-width: 500px){
+  .cart-sec {
+    background-color: #bf0d3c;
+    border-radius: 5px;
+    width: 393px;
+    height: 168px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: nowrap;
+  }
+} 

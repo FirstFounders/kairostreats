@@ -25,7 +25,7 @@ export default function Cart() {
           {!cart.length > 0 ? (
             <Fragment>
               <h3>Your Basket is empty</h3>
-              <Link to='/cakeitem'>
+              <Link to='/'>
                 <button className='shop'>Shop Now</button>
               </Link>
             </Fragment>

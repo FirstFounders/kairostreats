@@ -7,7 +7,7 @@ export default function CartItem({ product, remove, increase, decrease }) {
     <div className='overall-cart'>
       <div className='cart-sec'>
         <div className='cart-flex'>
-          <div>
+          <div className="cart-img">
             <img src={product.picture} alt='' />
           </div>
           <div className='cart-container'>
