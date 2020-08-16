@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/kairostreats/static/css/main.33bc03b2.chunk.css",
+    "main.js": "/kairostreats/static/js/main.5641edaf.chunk.js",
+    "main.js.map": "/kairostreats/static/js/main.5641edaf.chunk.js.map",
+    "runtime-main.js": "/kairostreats/static/js/runtime-main.af0eb059.js",
+    "runtime-main.js.map": "/kairostreats/static/js/runtime-main.af0eb059.js.map",
+    "static/css/2.9c8c8187.chunk.css": "/kairostreats/static/css/2.9c8c8187.chunk.css",
+    "static/js/2.fb2ceafe.chunk.js": "/kairostreats/static/js/2.fb2ceafe.chunk.js",
+    "static/js/2.fb2ceafe.chunk.js.map": "/kairostreats/static/js/2.fb2ceafe.chunk.js.map",
+    "index.html": "/kairostreats/index.html",
+    "precache-manifest.04187603a18fe886afbbf7c97292c6ed.js": "/kairostreats/precache-manifest.04187603a18fe886afbbf7c97292c6ed.js",
+    "service-worker.js": "/kairostreats/service-worker.js",
+    "static/css/2.9c8c8187.chunk.css.map": "/kairostreats/static/css/2.9c8c8187.chunk.css.map",
+    "static/css/main.33bc03b2.chunk.css.map": "/kairostreats/static/css/main.33bc03b2.chunk.css.map",
+    "static/js/2.fb2ceafe.chunk.js.LICENSE.txt": "/kairostreats/static/js/2.fb2ceafe.chunk.js.LICENSE.txt",
+    "static/media/Showcase.css": "/kairostreats/static/media/Group93bg.5427d75a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.af0eb059.js",
+    "static/css/2.9c8c8187.chunk.css",
+    "static/js/2.fb2ceafe.chunk.js",
+    "static/css/main.33bc03b2.chunk.css",
+    "static/js/main.5641edaf.chunk.js"
+  ]
+}
