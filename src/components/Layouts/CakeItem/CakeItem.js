@@ -11,8 +11,13 @@ function CakeItem() {
   useEffect(() => {
     cakesContext.getAllCakes();
   }, []);
-  const { addProduct } = cartContext;
+
+  const { addProduct, cart } = cartContext;
   const { cakes } = cakesContext;
+
+  const isInCart = (product) => {
+    return cart.find((item) => item.id === product.id);
+  };
 
   return (
     <div className='c-bg'>
@@ -32,7 +37,11 @@ function CakeItem() {
               />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <Link to={`/product/${cake.id}`}>order now</Link>
+                  {!isInCart(cake) ? (
+                    <Link to={`/product/${cake.id}`}>order now</Link>
+                  ) : (
+                    <Link>Added to cart</Link>
+                  )}
                 </div>
               </div>
             </div>

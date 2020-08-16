@@ -11,7 +11,7 @@ import "./Cart.css";
 export default function Cart() {
   const cartContext = useContext(CartContext);
 
-  const { cart, totalPrice } = cartContext;
+  const { cart, totalPrice, removeProduct, increase, decrease } = cartContext;
   // const [cart, setCart] = useState([1, 2, 2]);
   return (
     <div>
@@ -32,14 +32,19 @@ export default function Cart() {
           ) : (
             <Fragment>
               {cart.map((item) => (
-                <CartItem product={item} />
+                <CartItem
+                  product={item}
+                  remove={() => removeProduct(item)}
+                  increase={() => increase(item)}
+                  decrease={() => decrease(item)}
+                />
               ))}
               <h2>Total</h2>
               <p>{totalPrice}</p>
               <button className='checkout'>Check Out</button>
+              <Cartform />
             </Fragment>
           )}
-          <Cartform />
         </div>
       </div>
     </div>

@@ -14,7 +14,9 @@ const Storage = (cart) => {
 export const sumItems = (cart) => {
   Storage(cart);
   let itemCount = cart.reduce((total, product) => total + product.quantity, 0);
-  let total = cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+  let total = cart
+    .reduce((total, product) => total + product.price * product.quantity, 0)
+    .toFixed(2);
   return { itemCount, total };
 };
 
@@ -52,6 +54,7 @@ export const CartReducer = (state, action) => {
     case INCREASE_ITEM_QUANTITY:
       state.cart[state.cart.findIndex((item) => item.id === action.payload.id)]
         .quantity++;
+
       return {
         ...state,
         ...sumItems(state.cart),

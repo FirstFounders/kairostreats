@@ -2,7 +2,7 @@ import React from "react";
 
 import "./CartItem.css";
 
-export default function CartItem({ product }) {
+export default function CartItem({ product, remove, increase, decrease }) {
   return (
     <div className='overall-cart'>
       <div className='cart-sec'>
@@ -16,7 +16,7 @@ export default function CartItem({ product }) {
               <h5 className='category'>{product.category}</h5>
             </div>
             <div className='cart-cal'>
-              <span className='minus'>
+              <span className='minus' onClick={decrease}>
                 <svg
                   width='12'
                   height='13'
@@ -28,7 +28,7 @@ export default function CartItem({ product }) {
                 </svg>
               </span>
               <span className='one'>{product.quantity}</span>
-              <span className='plus'>
+              <span className='plus' onClick={increase}>
                 <svg
                   width='13'
                   height='13'
@@ -43,7 +43,7 @@ export default function CartItem({ product }) {
                 </svg>
               </span>
 
-              <p className='remove1'>
+              <p className='remove1' onClick={remove}>
                 <span>
                   <svg
                     width='14'
