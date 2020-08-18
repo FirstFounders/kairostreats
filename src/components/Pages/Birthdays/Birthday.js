@@ -27,7 +27,7 @@ function Birthday(){
                 />
                 <div className='cake-overlay overlay-left'>
                     <div className='cake-text'>
-                        <Link to='/ordernow'>order now</Link>
+                        <Link to={`/product/${cake.id}`}>order now</Link>
                     </div>
                 </div>
                 </div>

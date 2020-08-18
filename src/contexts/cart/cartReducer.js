@@ -41,6 +41,7 @@ export const CartReducer = (state, action) => {
         ...sumItems(state.cart),
         cart: [...state.cart],
         loading: false,
+        totalPrice: action.payload.price
       };
 
     case REMOVE_ITEM_FROM_CART:

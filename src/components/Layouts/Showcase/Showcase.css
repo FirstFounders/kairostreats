@@ -1,3 +1,8 @@
+/* @font-face {
+    font-family: "CaviarDreams";
+    src: url("/CaviarDreams.ttf"),
+    } */
+
 .showcase-bg{
     background-image: url("./images/Group93bg.png");
     min-height: 100vh;
@@ -89,10 +94,11 @@
 }
 
 .text-area .text p{
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'caviardreams';
     font-size: 20px;
     margin-bottom: 35px;
     line-height: 23px;
+    font-weight: normal;
 }
 
 .text-area .text button{
@@ -104,15 +110,15 @@
     background-color: #ef476f;
     text-align: center;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
     font-size: 19px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'caviardreams';
     transition: 0.5s;
 }
 
 .text-area .text button:hover {
     background-color: #ef476f;
-    width: 50%;
+    width: 60%;
 }
 
 .svg-area{
@@ -205,7 +211,7 @@
     }
     
     .text-area .text p{
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'caviardreams';
         font-size: 18px;
     }
 
@@ -222,15 +228,15 @@
         background-color: #ef476f;
         text-align: center;
         cursor: pointer;
-        width: 40%;
+        width: 70%;
         font-size: 19px;
-        font-family: 'Roboto Slab', serif;
+        font-family: 'caviardreams';
         transition: 0.5s;
     }
     
     .text-area .text button:hover {
         background-color: #ef476f;
-        width: 50%;
+        width: 80%;
     }
 }
 

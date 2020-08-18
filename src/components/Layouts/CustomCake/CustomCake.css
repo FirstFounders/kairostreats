@@ -71,13 +71,14 @@
     
 }
 .custom-images-cake .vector{
-    text-align: center;
+    /* text-align: center; */
+    margin-right: 3em;
     margin-top: 20px;
 }
 .flex1{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 8em;
+    margin-left: 10em;
     margin-top: 10px;
     transition: all .3s ease;
 }
@@ -87,7 +88,7 @@
 }
 
 .flex1 .two{
-    margin-right: 140px;
+    margin-right: 12rem;
 }
 
 .flex1 img{
@@ -97,7 +98,7 @@
 .flex2{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 8em;
+    margin-left: 10em;
     margin-top: 10px;
     transition: all .3s ease;
 }
@@ -111,7 +112,7 @@
 }
 
 .flex2 .four{
-    margin-right: 140px;
+    margin-right: 12rem;
 }
 
 /* Media Query */

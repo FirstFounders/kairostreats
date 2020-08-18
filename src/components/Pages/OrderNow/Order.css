@@ -46,8 +46,8 @@
     line-height: 35px;
 }
 
-
-.flavor-category button{
+/* Select Flavor section */
+ .ant-radio-button {
     color: #000000;
     line-height: 30px;
     font-size: 16px;
@@ -58,26 +58,45 @@
     padding: 0 25px 5px;
     border: 1px solid #F24472;
     border-radius: 5px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+}
+.ant-radio-button-wrapper{
+    border: none;
+    border-left-style: none;
+    
+}
+.ant-radio-button-inner{
+    border: none;
+    border-left: none;
 }
 
-.flavor-category button:hover{
+.ant-radio-button-wrapper:hover{
     background-color: #F24472;
     color: #ffffff;
 }
 
-.flavor-category button:first-of-type {
+.ant-radio-button-wrapper:first-of-type {
     margin-right: 1em;
+    border: none;
   }
 
-  .flavor-category button:nth-child(2) {
+  .ant-radio-button-wrapper:nth-child(2) {
     margin-right: 1em;
+    border-left: none;
+    /* outline: none; */
   }
 
-  .flavor-category button:nth-child(3) {
+  .ant-radio-button-wrapper:nth-child(3) {
     margin-right: 1em;
+    border-left: none;
   }
 
+  .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: #fff;
+    background: #F24472;
+    border-color: #F24472;
+    outline: none;
+  }
   /* Flavor-size */
   .flavor-size button{
     cursor: pointer;
@@ -215,6 +234,139 @@
     font-size: 19px;
     letter-spacing: 0.05em;
     font-family: 'Cormorant Garamond', serif;
+}
+
+.ant-modal-content{
+    background: #F24472;
+    height: 350px;
+    width: 350px;
+}
+
+.ant-modal-header{
+    display: none;
+}
+
+.ant-modal-footer{
+    display: none;
+}
+
+.ant-modal-close{
+    display: none;
+}
+
+/* Ant design modal */
+.modal-bg{
+    text-align: center;
+    width: 27px;
+    height: 27px;
+    background-color: #F57093;
+    border-radius: 50%;
+    margin-left: 20em;
+    padding: 3px;
+    
+}
+.modal-btn{
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Form area popup */
+.form-area textarea{
+    margin-top: 1.5em;
+    width: 290px;
+    height: 186px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    outline:none;
+    border: none;
+    background-color: #ffffff;
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    color: #888888;
+    resize: none;
+}
+
+.form-area label{
+    margin-top: 1em;
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.form-area p{
+    font-family: Caviar Dreams;
+    color: #ffffff;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+.form-area input[type=submit] {
+    margin-left: 13em;
+    border: none;
+    outline: none;
+    color: white;
+    background:#F24472;
+    cursor: pointer;
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+/* Note-Area */
+.note-area{
+    margin-top: 2em;
+}
+.note-area span{
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.text-area-return textarea {
+    width: 80%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    outline: none;
+}
+
+.text-change-area span:nth-child(1){
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #F24472;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.text-change-area span:nth-child(2){
+    font-family: Caviar Dreams;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 @media(max-width: 500px){

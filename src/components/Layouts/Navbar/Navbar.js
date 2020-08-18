@@ -14,10 +14,6 @@ function Navbar() {
     setVisible(true);
   };
 
-  const isMobile = () => {
-    setVisible(true);
-  }
-
   const onClose = () => {
     setVisible(false);
   };
@@ -72,14 +68,14 @@ function Navbar() {
         <Drawer
           // className="ant-drawer-body"
           // width='700px'
-          width={isMobile ? "700px" : "300px"}
+          // width={isMobile ? "700px" : "300px"}
           placement='right'
           closable={false}
           onClose={onClose}
           visible={visible}
           drawerStyle={{
             background: "#F24472",
-            width: "700px",
+            // width: "700px",
           }}
         >
           <div className='close-bg'>

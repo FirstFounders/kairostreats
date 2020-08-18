@@ -30,6 +30,7 @@ nav{
     top: 0;
     width: 100%;
     z-index: 999;
+    font-family: 'caviardreams';
 }
 
 nav ul{
@@ -52,6 +53,7 @@ nav ul:first-child li{
     justify-content: center;
     align-items: center;
     left: -10px;
+    font-family: 'caviardreams';
 }
 
 nav ul:first-child li img{
@@ -63,6 +65,10 @@ nav ul:first-child li img{
     padding: 10px;
     color: #000;
     font-size: 16px;
+    font-family: 'caviardreams';
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    line-height: 20px;
 }
 
 nav a:hover{
@@ -80,6 +86,7 @@ nav a:hover{
     box-shadow: -12px 10px 10px 2px rgb(0, 0, 0, 0.4);
     color: #000;
     animation: slideUp 0.2s linear;
+    font-family: 'caviardreams';
 }
 
 .sub-menu li{
@@ -120,6 +127,12 @@ nav a:hover{
     width: 150px; 
 }
 
+.ant-drawer-content-wrapper,
+    .ant-drawer-content-body
+    {
+        width: 700px !important;
+
+    }
 
 @media(max-width: 500px) {
     nav{
@@ -127,10 +140,17 @@ nav a:hover{
         
     }
 
-    .ant-drawer-body{
-        width: 100px;
-
+    .ant-drawer-content-wrapper,
+    .ant-drawer-content-body
+    {
+        width: 390px !important;
+        overflow-x: hidden;
     }
+
+    
+      
+      
+      
 
 }
 

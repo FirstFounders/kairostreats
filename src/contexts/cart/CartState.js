@@ -13,6 +13,7 @@ const CartState = (props) => {
   const storage = localStorage.getItem("cart")
     ? JSON.parse(localStorage.getItem("cart"))
     : [];
+
   const initialState = {
     cart: storage,
     totalPrice: 0,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./CartItem.css";
 
@@ -73,7 +74,9 @@ export default function CartItem({ product, remove, increase, decrease }) {
         </div>
 
         <div className='total-cart'>
-          <h4>Edit order</h4>
+          <Link to="/product/:id">
+            <h4>Edit order</h4>
+          </Link>
           <br></br>
           <br></br>
           <p>N {product.price}</p>
