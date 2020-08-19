@@ -30,7 +30,7 @@ function Navbar() {
       <ul>
         <li className='menu'>
           <Link to='/'>
-            Categories <i class='fa fa-caret-down' aria-hidden='true'></i>
+            Categories <i className='fa fa-caret-down' aria-hidden='true'></i>
           </Link>
           <ul className='sub-menu'>
             <li>
