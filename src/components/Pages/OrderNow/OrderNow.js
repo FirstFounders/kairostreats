@@ -12,6 +12,7 @@ import Form from './Form'
 export default function OrderNow(props) {
   console.log(props);
   const [product, setProduct] = useState({});
+  const [note, setNote] = useState("");
   const [visible, setVisible] = useState(false);
   const [size, setSize] = useState(product.size8)
   const [flavours, setFlavours] = useState([])
@@ -96,6 +97,7 @@ export default function OrderNow(props) {
           </div>
           {/* {product.isCustomizable === 1 && ( ) */}
             <Fragment>
+            {note.length < 3?
               <button className='add-note'>
                 Add note
                 <span className='svg-plus'>
@@ -112,7 +114,32 @@ export default function OrderNow(props) {
                       fill='#F24472'
                     />
                   </svg>
-                  <Modal
+                </span>
+              </button>
+              :
+              <div className="note-area">
+                <span>Note</span>
+                <div className="text-area-return">
+                  <form>
+                  <textarea 
+                  rows={6}
+                  type="text"
+                  maxLength="120"
+                  value={note}
+                  disabled
+                  readOnly
+                  />
+                  </form>
+
+                  <div className="text-change-area">
+                  <span onClick={showModal}>Edit Note</span>
+                  <span onClick={()=>setNote("")}>Delete Note</span>
+                </div>
+                </div> 
+              </div>
+            }
+            
+            <Modal
                   title="Vertically centered modal dialog"
                   centered
                   visible={visible}
@@ -143,29 +170,10 @@ export default function OrderNow(props) {
                       </span>
                     </div>
                     <div className="form-container">
-                      <Form/>
+                      <Form onCancel={handleCancel} addNote={setNote}/>
                     </div>
 
                   </Modal>
-                </span>
-              </button>
-              <div className="note-area">
-                <span>Note</span>
-                <div className="text-area-return">
-                  <form>
-                  <textarea 
-                  rows={6}
-                  type="text"
-                  maxLength="120"
-                  />
-                  </form>
-
-                  <div className="text-change-area">
-                  <span>Edit Note</span>
-                  <span>Delete Note</span>
-                </div>
-                </div> 
-              </div>
               <p>Upload an image that you want printed on the cake(Optional)</p>
               <Upload {...upload}>
               <button className='upload-image'>

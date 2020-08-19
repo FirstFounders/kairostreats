@@ -18,14 +18,16 @@ class Form extends Component {
         const charCount = event.target.value.length;
         const maxChar = this.state.max_char;
         const charLength = maxChar - charCount;
+        const {addNote}=this.props;
+        addNote(event.target.value)
         this.setState({ chars_left: charLength, value: event.target.value});
     }
 
 
 
-    handleSubmit(event) {
-        alert('An essay was submitted: ' + this.state.value);
+    handleSubmit=(event)=> {
         event.preventDefault();
+        this.props.onCancel();
       }
 
 
@@ -40,7 +42,7 @@ class Form extends Component {
                 type="text"
                 maxLength="120"
                 required
-                value={this.state.value} 
+                placeholder={this.state.value} 
                 onChange={this.handleWordCount}
                 />
                 </label>
