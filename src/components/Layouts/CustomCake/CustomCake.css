@@ -19,9 +19,7 @@
 .custom-container{
     display: flex;
     margin-top: 35px;
-    text-align: center;
-    
-    
+    text-align: center;    
 }
 
 .custom-img p{
@@ -154,4 +152,110 @@
         width: 100%;
     }
     
+}
+
+@media(max-width: 1024px){
+    .custom-container{
+        display: flex;
+        margin-top: 35px;
+        text-align: center;    
+    }
+    .custom-img{
+        width: 50%;
+    }
+    .custom-images-cake{
+        width: 50%;
+    }
+    .custom-img p{
+        text-align: center;
+        margin-top: 80px;
+        color: #ffffff;
+        font-size: 35px;
+        font-family: 'Playfair Display';
+        line-height: 60px;
+    }
+    
+    .custom-img button{
+        text-align: center;
+        padding: 13px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #ef476f;
+        text-align: center;
+        cursor: pointer;
+        width: 30%;
+        font-size: 19px;
+        font-family: 'Roboto Slab', serif;
+        transition: 0.5s;
+    }
+    
+    .custom-img button:hover {
+        background-color: #ef476f;
+        width: 40%;
+    }
+    .custom-container div{
+        flex:1;
+    }
+    
+    .custom-img{
+        background: linear-gradient(to left bottom, #000000 ,rgba(0, 0, 0, 0) ), url("https://i.ibb.co/m6bLmgF/desert2.jpg")no-repeat center/cover;
+        height: 500px; 
+        /* margin: 0; */
+    
+        
+    }
+    
+    .custom-images-cake{
+        background-color: #F24472;
+        height: 500px;
+        text-align: center;
+        
+    }
+    .custom-images-cake .vector{
+        /* text-align: center; */
+        margin-left: 3em;
+        margin-top: 20px;
+    }
+    .flex1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5em;
+        margin-top: 15px;
+        transition: all .3s ease;
+    }
+    
+    .flex1:hover{
+        transform: translateY(4px);
+    }
+    
+    .flex1 .two{
+        margin-left: 1rem;
+    }
+    
+    .flex1 img{
+        width: 180px;
+    }
+    
+    .flex2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5em;
+        margin-top: 15px;
+        transition: all .3s ease;
+    }
+    
+    .flex2:hover{
+        transform: translateY(4px);
+    }
+    
+    .flex2 img{
+        width: 180px;
+    }
+    
+    .flex2 .four{
+        margin-left: 1rem;
+    }
+    
+
 }

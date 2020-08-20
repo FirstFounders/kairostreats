@@ -107,18 +107,12 @@
     .special-flex{
         margin-top: 30px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        flex-flow: row;
+        justify-content: flex-start;
         align-items: center;
+        flex-wrap: nowrap;
         
-    }
-
-    .special-svg .move{
-        display: none;
-    }
-
-    .special-svg .dot{
-        display: none;
     }
 
     .special-heading h1{
