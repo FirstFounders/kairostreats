@@ -203,7 +203,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* height: 70vh; */
+        margin-top: 3rem;
+        /* height: 40vh; */
     
     }
     .showcase-area .image-area{
@@ -263,3 +264,19 @@
     }
 }
 
+@media(max-width: 1024px){
+    .showcase-bg{
+        background-image: url("./images/Group93bg.png");
+        min-height: 70vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        position: relative;
+    }
+    
+}

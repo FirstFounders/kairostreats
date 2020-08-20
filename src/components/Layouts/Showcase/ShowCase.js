@@ -20,15 +20,15 @@ class ShowCase extends React.Component {
       };
     }
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    this.setState({
-      ...slidesArray,
-    });
+    // for (i = 0; i < slides.length; i++) {
+    //   slides[i].style.display = "none";
+    //   dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    // slides[slideIndex - 1].style.display = "block";
+    // dots[slideIndex - 1].className += " active";
+    // this.setState({
+    //   ...slidesArray,
+    // });
   };
 
   plusSize = (n) => {
