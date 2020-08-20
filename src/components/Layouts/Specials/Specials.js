@@ -84,7 +84,7 @@ function Specials() {
                 alt='Ellipse-14cake2'
                 />
               </Link>
-              <div className='s-text'>
+              <div key={cake.id} className='s-text'>
                 <h3>{cake.name}</h3>
                 <p>N {cake.price}</p>
               </div>

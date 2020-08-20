@@ -19,7 +19,7 @@ class ShowCase extends React.Component{
           slideIndex = 1;
           slidesArray={
               ...slidesArray,
-              slidesIndex:1
+              slidesIndex:1,
           }
       }
       if (slideIndex < 1) {
@@ -29,15 +29,15 @@ class ShowCase extends React.Component{
               slidesIndex:slides.length
           }
       }
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      this.setState({
-          ...slidesArray
-      })
+    //   for (i = 0; i < slides.length; i++) {
+    //     slides[i].style.display = "none";
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    //   }
+    //   slides[slideIndex-1].style.display = "block";
+    //   dots[slideIndex-1].className += "active";
+    //   this.setState({
+    //       ...slidesArray
+    //   })
     }
 
       plusSize=(n)=>{
