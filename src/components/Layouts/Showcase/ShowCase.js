@@ -19,13 +19,7 @@ class ShowCase extends React.Component {
         slidesIndex: 1,
       };
     }
-    if (slideIndex < 1) {
-      slideIndex = slides.length;
-      slidesArray = {
-        ...slidesArray,
-        slidesIndex: slides.length,
-      };
-    }
+
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
       dots[i].className = dots[i].className.replace(" active", "");

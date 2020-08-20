@@ -217,10 +217,10 @@
     
     .showcase-area .image-area .white-bg{
         width: 100%;
-        height: 95%;
+        height: 100%;
         position: relative;
-        top: 5px;
-        left: 5px;
+        top: 3px;
+        left: 3px;
     }
 
     /* .showcase-area .image-area .image-bg{
