@@ -7,6 +7,7 @@ import Cartform from "./Cartform/Cartform";
 import CartContext from "../../../contexts/cart/cartContext";
 
 import "./Cart.css";
+import { formatCurrency } from "../../../helpers";
 
 export default function Cart() {
   const cartContext = useContext(CartContext);
@@ -40,7 +41,7 @@ export default function Cart() {
                 />
               ))}
               <h2>Total</h2>
-              <p>{totalPrice}</p>
+              <p>{formatCurrency(totalPrice)}</p>
               <button className='checkout'>Check Out</button>
               <Cartform />
             </Fragment>

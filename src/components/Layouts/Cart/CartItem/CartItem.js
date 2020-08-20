@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./CartItem.css";
+import { formatCurrency } from "../../../../helpers";
 
 export default function CartItem({ product, remove, increase, decrease }) {
   return (
     <div className='overall-cart'>
       <div className='cart-sec'>
         <div className='cart-flex'>
-          <div className="cart-img">
+          <div className='cart-img'>
             <img src={product.picture} alt='' />
           </div>
           <div className='cart-container'>
@@ -17,17 +18,19 @@ export default function CartItem({ product, remove, increase, decrease }) {
               <h5 className='category'>{product.category}</h5>
             </div>
             <div className='cart-cal'>
-              <span className='minus' onClick={decrease}>
-                <svg
-                  width='12'
-                  height='13'
-                  viewBox='0 0 12 3'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path d='M0 0H12V3H0V0Z' fill='white' />
-                </svg>
-              </span>
+              {product.quantity > 1 && (
+                <span className='minus' onClick={decrease} >
+                  <svg
+                    width='12'
+                    height='13'
+                    viewBox='0 0 12 3'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path d='M0 0H12V3H0V0Z' fill='white' />
+                  </svg>
+                </span>
+              )}
               <span className='one'>{product.quantity}</span>
               <span className='plus' onClick={increase}>
                 <svg
@@ -74,12 +77,12 @@ export default function CartItem({ product, remove, increase, decrease }) {
         </div>
 
         <div className='total-cart'>
-          <Link to="/product/:id">
+          <Link to={`/product/${product.id}`}>
             <h4>Edit order</h4>
           </Link>
           <br></br>
           <br></br>
-          <p>N {product.price}</p>
+          <p>{formatCurrency(product.price)}</p>
         </div>
       </div>
     </div>

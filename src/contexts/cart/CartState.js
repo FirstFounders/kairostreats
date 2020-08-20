@@ -6,7 +6,7 @@ import {
   DECREASE_ITEM_QUANTITY,
   CLEAR_CART,
 } from "../ActionTypes";
-import { CartReducer } from "./cartReducer";
+import { CartReducer, sumItems } from "./cartReducer";
 import CartContext from "./cartContext";
 
 const CartState = (props) => {
@@ -16,7 +16,7 @@ const CartState = (props) => {
 
   const initialState = {
     cart: storage,
-    totalPrice: 0,
+    ...sumItems(storage),
     checkout: false,
   };
 
@@ -46,13 +46,13 @@ const CartState = (props) => {
     <CartContext.Provider
       value={{
         cart: state.cart,
-        totalPrice: state.totalPrice,
         loading: state.loading,
         removeProduct,
         addProduct,
         increase,
         decrease,
         clearCart,
+        ...state
       }}
     >
       {props.children}
