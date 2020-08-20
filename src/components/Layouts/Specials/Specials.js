@@ -2,8 +2,8 @@ import React, { useEffect, useContext } from "react";
 import "./Special.css";
 import CakesContext from "../../../contexts/cakes/cakesContext";
 
-
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { formatCurrency } from "../../../helpers";
 
 function Specials() {
   const cakesContext = useContext(CakesContext);
@@ -12,89 +12,100 @@ function Specials() {
   useEffect(() => {
     getRecommendedCakes();
   }, []);
-  const handleLeft=()=>{
-    const itemSize=document.querySelector('.special-flex-box')?.offsetWidth;
-    const container = document.querySelector('.special-flex');
-    container.scrollTo(container.scrollLeft - itemSize > 0? container.scrollLeft - itemSize : 0, 0);
-  }
-  
-  const handleRight=()=>{
-    const itemSize=document.querySelector('.special-flex-box')?.offsetWidth;
-    const containerSize=document.querySelector('.special-flex')?.offsetWidth;
-    const container = document.querySelector('.special-flex');
-    container.scrollTo(container.scrollLeft + itemSize < containerSize? container.scrollLeft + itemSize : containerSize, 0);
-  }
-  
-  
-  const componentDidMount=()=>{
-    var timer = null;
-    const container = document.querySelector('.special-flex');
-    const itemSize=document.querySelector('.special-flex-box')?.offsetWidth;
-    const back=document.querySelector('.scroll-back-button-control');
-    const next=document.querySelector('.scroll-next-button-control');
-    const containerSize=document.querySelector('.special-flex')?.offsetWidth;
-    if(itemSize && containerSize){
+  const handleLeft = () => {
+    const itemSize = document.querySelector(".special-flex-box")?.offsetWidth;
+    const container = document.querySelector(".special-flex");
+    container.scrollTo(
+      container.scrollLeft - itemSize > 0 ? container.scrollLeft - itemSize : 0,
+      0
+    );
+  };
 
-      container.addEventListener('scroll', ()=> {
-        if(timer !== null) {
-          clearTimeout(timer);        
-        }
-        if(container.scrollLeft < itemSize){
-          back.style.opacity = '0.1';
-          back.style.cursor ='not-allowed'
-        }else{
-          back.style.opacity = '1';
-          back.style.cursor ='pointer'
-        }
-        if(container.scrollLeft > containerSize - itemSize){
-          next.style.opacity = '0.1';
-          next.style.cursor ='not-allowed'
-        }else{
-          next.style.opacity = '1';
-          next.style.cursor ='pointer'
-        }
-    
-        timer = setTimeout(function() {
-          var scrollPast = Math.floor(container.scrollLeft / itemSize);
-          var excess = Math.floor(container.scrollLeft % itemSize);
-          if(excess < itemSize/2){
-            container.scrollTo(itemSize*scrollPast, 0);
-          }else{
-            container.scrollTo(itemSize*(scrollPast + 1), 0);
+  const handleRight = () => {
+    const itemSize = document.querySelector(".special-flex-box")?.offsetWidth;
+    const containerSize = document.querySelector(".special-flex")?.offsetWidth;
+    const container = document.querySelector(".special-flex");
+    container.scrollTo(
+      container.scrollLeft + itemSize < containerSize
+        ? container.scrollLeft + itemSize
+        : containerSize,
+      0
+    );
+  };
+
+  const componentDidMount = () => {
+    var timer = null;
+    const container = document.querySelector(".special-flex");
+    const itemSize = document.querySelector(".special-flex-box")?.offsetWidth;
+    const back = document.querySelector(".scroll-back-button-control");
+    const next = document.querySelector(".scroll-next-button-control");
+    const containerSize = document.querySelector(".special-flex")?.offsetWidth;
+    if (itemSize && containerSize) {
+      container.addEventListener(
+        "scroll",
+        () => {
+          if (timer !== null) {
+            clearTimeout(timer);
           }
-          
-        }, 150);
-      }, false);
+          if (container.scrollLeft < itemSize) {
+            back.style.opacity = "0.1";
+            back.style.cursor = "not-allowed";
+          } else {
+            back.style.opacity = "1";
+            back.style.cursor = "pointer";
+          }
+          if (container.scrollLeft > containerSize - itemSize) {
+            next.style.opacity = "0.1";
+            next.style.cursor = "not-allowed";
+          } else {
+            next.style.opacity = "1";
+            next.style.cursor = "pointer";
+          }
+
+          timer = setTimeout(function () {
+            var scrollPast = Math.floor(container.scrollLeft / itemSize);
+            var excess = Math.floor(container.scrollLeft % itemSize);
+            if (excess < itemSize / 2) {
+              container.scrollTo(itemSize * scrollPast, 0);
+            } else {
+              container.scrollTo(itemSize * (scrollPast + 1), 0);
+            }
+          }, 150);
+        },
+        false
+      );
     }
-  }
+  };
   return (
     <div className='bg-special' onLoad={componentDidMount()}>
       <div className='special-heading'>
         <h1>Specials</h1>
         <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
       </div>
-  
+
       <div className='overall-special'>
         <div className='special-flex'>
           {recommended_cakes.map((cake) => (
-            <div className="special-flex-box">
-              <Link to="/SpecialPage">
+            <div className='special-flex-box'>
+              <Link to={`/product/${cake.id}`}>
                 <img
-                src='https://i.ibb.co/1JJyMhk/Ellipse-14cake2.png'
-                alt='Ellipse-14cake2'
+                  src='https://i.ibb.co/1JJyMhk/Ellipse-14cake2.png'
+                  alt='Ellipse-14cake2'
                 />
               </Link>
               <div key={cake.id} className='s-text'>
                 <h3>{cake.name}</h3>
-                <p>N {cake.price}</p>
+                <p>{formatCurrency(cake.size8)}</p>
               </div>
             </div>
           ))}
         </div>
-        
 
         <div className='special-svg'>
-          <div className='move backward scroll-back-button-control' onClick={handleLeft}>
+          <div
+            className='move backward scroll-back-button-control'
+            onClick={handleLeft}
+          >
             <svg
               width='21'
               height='16'
@@ -112,7 +123,10 @@ function Specials() {
           <div className='dot'> </div>
           <div className='dot'> </div>
           <div className='dot'> </div>
-          <div className='move forward scroll-next-button-control' onClick={handleRight}>
+          <div
+            className='move forward scroll-next-button-control'
+            onClick={handleRight}
+          >
             <svg
               width='21'
               height='16'

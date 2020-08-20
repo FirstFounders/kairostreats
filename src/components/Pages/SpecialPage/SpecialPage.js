@@ -1,12 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import CakesContext from "../../../contexts/cakes/cakesContext";
 import { Link } from "react-router-dom";
+import { formatCurrency } from "../../../helpers";
 
 
 function SpecialPage(){
     const cakesContext = useContext(CakesContext);
     useEffect(() => {
-    cakesContext.getAllCakes();
+    cakesContext.getRecommendedCakes();
 }, []);
     const { cakes } = cakesContext;
     return(
@@ -36,7 +37,7 @@ function SpecialPage(){
                 <div className='cake-content'>
                 <h5>{cake.name}</h5>
                 <p>{cake.category}</p>
-                <h4>N {cake.price}</h4>
+                <h4>{formatCurrency(cake.size8)}</h4>
                 </div>
             </div>
             ))}
