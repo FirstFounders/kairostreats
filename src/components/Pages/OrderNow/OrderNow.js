@@ -10,7 +10,7 @@ import Form from "./Form";
 import { formatCurrency } from "../../../helpers";
 
 export default function OrderNow(props) {
-  console.log(props);
+  // console.log(props);
   const [product, setProduct] = useState({});
   const [note, setNote] = useState("");
   const [visible, setVisible] = useState(false);
@@ -19,12 +19,12 @@ export default function OrderNow(props) {
   const cartContext = useContext(CartContext);
   useEffect(() => {
     Axios.get(`/products/${props.match.params.id}`).then((dt) => {
-      console.log(dt.data.data);
+      // console.log(dt.data.data);
       setProduct(dt.data.data);
       setSize(dt.data.data.size8);
     });
   }, [props.match.params.id]);
-  console.log(product.flavours);
+  // console.log(product.flavours);
 
   const { addProduct } = cartContext;
 
@@ -52,7 +52,7 @@ export default function OrderNow(props) {
     action: "//jsonplaceholder.typicode.com/posts/",
     listType: "picture",
     previewFile(file) {
-      console.log("Your upload file:", file);
+      // console.log("Your upload file:", file);
       // Your process logic. Here we just mock to the same file
       return fetch("https://next.json-generator.com/api/json/get/4ytyBoLK8", {
         method: "POST",

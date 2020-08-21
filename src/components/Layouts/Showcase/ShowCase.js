@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Showcase.css";
 
 import { Link } from "react-router-dom";
 
-class ShowCase extends React.Component {
+class ShowCase extends Component {
   state = {
     slidesIndex: 1,
   };
@@ -19,12 +19,13 @@ class ShowCase extends React.Component {
         slidesIndex: 1,
       };
     }
+    if(slides.length > 1 && dots.length > 1){
 
-    if(dots && slides){
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         dots[i].className = dots[i].className.replace(" active", "");
       }
+      // console.log(slides)
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
       this.setState({
@@ -45,7 +46,7 @@ class ShowCase extends React.Component {
     this.showSlides(slidesArray, slideIndex);
   };
 
-  componentDidMount() {
+  componentDidMount=() =>{
     this.showSlides({ ...this.state }, 1);
     var x = false;
     const self = this;

@@ -24,7 +24,7 @@ const CakesState = (props) => {
   const getAllCakes = async () => {
     setLoading();
     const response = await Axios.get("/products");
-    console.log(response.data);
+    // console.log(response.data);
     dispatch({ type: GET_CAKES, payload: response.data.data });
   };
 
