@@ -10,8 +10,8 @@ class ShowCase extends React.Component {
 
   showSlides = (slidesArray, slideIndex) => {
     var i;
-    var slides = document.querySelectorAll(".white-bg img");
-    var dots = document.querySelectorAll(".dot");
+    const slides = document.querySelectorAll(".white-bg img");
+    const dots = document.querySelectorAll(".dot");
     if (slideIndex > slides.length) {
       slideIndex = 1;
       slidesArray = {
@@ -20,15 +20,17 @@ class ShowCase extends React.Component {
       };
     }
 
-    // for (i = 0; i < slides.length; i++) {
-    //   slides[i].style.display = "none";
-    //   dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    // slides[slideIndex - 1].style.display = "block";
-    // dots[slideIndex - 1].className += " active";
-    // this.setState({
-    //   ...slidesArray,
-    // });
+    if(dots && slides){
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      this.setState({
+        ...slidesArray,
+      });
+    }
   };
 
   plusSize = (n) => {
