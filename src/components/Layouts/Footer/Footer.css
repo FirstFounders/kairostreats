@@ -1,5 +1,6 @@
 .bg-footer{
     margin-top: 80px;
+    padding-top: 3vmax;
     background-color: #000000;
     width: 100%;
     color: #ffffff;
@@ -11,4 +12,30 @@
 
 .f-heading img{
     margin-top: 30px;
+}
+.footerOne{
+    display: flex;
+    padding: 6vmax 0;
+}
+h2, h3{
+    color: #fff;
+}
+.infoBox{
+    width: 30%;
+    margin-right: 2.6vmax;
+}
+.infoBox h2, .infoBox h3{
+    text-align: right;
+}
+.mapBox{
+    width: 70%;
+    margin-left: 2.6vmax;
+}
+.mapBox iframe{
+    height: 20.25vmax;
+    width: 38vmax;
+}
+.footerTwo{
+    background-color: #3a3a3a;
+    height: 9.5rem;
 }
