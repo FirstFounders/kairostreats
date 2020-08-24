@@ -12,11 +12,11 @@ export default function Footer(){
             <div className="footerOne">
                 <div className="infoBox">
                     <h2>Contact Us</h2>
-                    <h3>1, seni towobola cl, Ilupeju</h3>
+                    <h3>1, Seni Towobola Close, Ilupeju</h3>
                     <h2>Phone</h2>
-                    <h3>08993654052</h3>
+                    <h3><a href="tel:+2348029431828">0802-943-1828</a></h3>
                     <h2>Email Address</h2>
-                    <h3>onyinyekairos@gmail.com</h3>
+                    <h3><a href = "mailto: onyinyekairos@gmail.com">onyinyekairos@gmail.com</a></h3>
                 </div>
                 <div className="mapBox">
                     <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=650&amp;height=400&amp;hl=en&amp;q=1%20Seni%20Towobola%20Cl,%20Ilupeju,%20Lagos,%20Nigeria%20Lagos+(Kairos%20Treats)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>

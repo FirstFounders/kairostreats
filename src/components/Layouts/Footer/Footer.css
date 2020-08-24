@@ -17,7 +17,7 @@
     display: flex;
     padding: 6vmax 0;
 }
-h2, h3{
+h2, h3, a{
     color: #fff;
 }
 .infoBox{
