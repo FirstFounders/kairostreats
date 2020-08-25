@@ -5,9 +5,11 @@ import {
   INCREASE_ITEM_QUANTITY,
   DECREASE_ITEM_QUANTITY,
   CLEAR_CART,
+  CHECKOUT,
 } from "../ActionTypes";
 import { CartReducer, sumItems } from "./cartReducer";
 import CartContext from "./cartContext";
+import Axios from "axios";
 
 const CartState = (props) => {
   const storage = localStorage.getItem("cart")
@@ -38,6 +40,11 @@ const CartState = (props) => {
     dispatch({ type: REMOVE_ITEM_FROM_CART, payload });
   };
 
+  const checkout = async (data) => {
+    const response = await Axios.get("/order", data);
+    dispatch({ type: CHECKOUT, payload: response.data.data });
+  };
+
   const clearCart = () => {
     dispatch({ type: CLEAR_CART });
   };
@@ -51,8 +58,9 @@ const CartState = (props) => {
         addProduct,
         increase,
         decrease,
+        checkout,
         clearCart,
-        ...state
+        ...state,
       }}
     >
       {props.children}
