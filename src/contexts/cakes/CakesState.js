@@ -2,12 +2,7 @@ import React, { useReducer } from "react";
 import Axios from "axios";
 import CakesContext from "./cakesContext";
 import CakesReducer from "./cakesReducer";
-import {
-  GET_CAKES,
-  GET_RECOMMENDED_CAKES,
-  SET_LOADING,
-  GET_CAKE,
-} from "../ActionTypes";
+import { GET_CAKES, GET_RECOMMENDED_CAKES, SET_LOADING } from "../ActionTypes";
 
 const CakesState = (props) => {
   const initialState = {

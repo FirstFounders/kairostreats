@@ -11,6 +11,7 @@ import { formatCurrency } from "../../../helpers";
 
 export default function Cart() {
   const cartContext = useContext(CartContext);
+  const [visible, setVisible] = useState(false);
 
   const { cart, totalPrice, removeProduct, increase, decrease } = cartContext;
   const [showButton, setShowButton] = useState(false);
@@ -36,6 +37,7 @@ export default function Cart() {
             <Fragment>
               {cart.map((item) => (
                 <CartItem
+                  key={item.id}
                   product={item}
                   remove={() => removeProduct(item)}
                   increase={() => increase(item)}
@@ -44,11 +46,7 @@ export default function Cart() {
               ))}
               <h2>Total</h2>
               <p>{formatCurrency(totalPrice)}</p>
-              <button className='checkout'
-              onClick={onClick}
-              >Check Out</button>
-              {/* <Cartform /> */}
-              { showButton ? <Cartform/> : null }
+
             </Fragment>
           )}
         </div>
