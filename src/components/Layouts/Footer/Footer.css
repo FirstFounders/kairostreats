@@ -11,7 +11,7 @@
 }
 
 .f-heading img{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .footerOne{
     display: flex;
@@ -43,8 +43,32 @@ h2, h3, a{
 }
 
 /* media query */
-@media(max-width: 1024px){
+@media(max-width: 500px){
+    .f-heading img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
     .mapBox{
         display: none;
+    }
+
+    .footerOne{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .infoBox{
+        width: 100%;
+        margin-left: 2.6vmax;
+    }
+    .infoBox h2, .infoBox h3{
+        text-align: center;
+    }
+
+    h2, h3, a{
+        color: #fff;
+        font-size: 16px;
     }
 }

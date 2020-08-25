@@ -135,6 +135,7 @@ nav a:hover{
     .ant-drawer-content-body
     {
         width: 700px !important;
+        box-sizing: border-box;
 
     }
 
@@ -167,6 +168,7 @@ nav a:hover{
     {
         width: 390px !important;
         overflow-x: hidden;
+        box-sizing: border-box;
     }
 
     

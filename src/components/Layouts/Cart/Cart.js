@@ -48,7 +48,7 @@ export default function Cart() {
               onClick={onClick}
               >Check Out</button>
               {/* <Cartform /> */}
-              { showButton ? <Cartform/> : null }
+              <div>{ showButton ? <Cartform/> : null }</div>
             </Fragment>
           )}
         </div>
