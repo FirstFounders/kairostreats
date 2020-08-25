@@ -15,27 +15,36 @@
 }
 .footerOne{
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 6vmax 0;
 }
-h2, h3{
+h2, h3, a{
     color: #fff;
 }
 .infoBox{
-    width: 30%;
+    width: 50%;
     margin-right: 2.6vmax;
 }
 .infoBox h2, .infoBox h3{
     text-align: right;
 }
 .mapBox{
-    width: 70%;
+    width: 100%;
     margin-left: 2.6vmax;
 }
 .mapBox iframe{
-    height: 20.25vmax;
-    width: 38vmax;
+    height: 20.85vmax;
+    width: 55vmax;
 }
 .footerTwo{
     background-color: #3a3a3a;
     height: 9.5rem;
+}
+
+/* media query */
+@media(max-width: 1024px){
+    .mapBox{
+        display: none;
+    }
 }

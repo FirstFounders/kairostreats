@@ -77,4 +77,3 @@ const Cartform = () => {
   );
 };
 
-export default Cartform;

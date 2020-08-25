@@ -135,13 +135,16 @@
 
 @media(max-width: 500px){
   .cart-sec {
+    box-sizing: border-box;
     background-color: #bf0d3c;
     border-radius: 10px;
-    width: 398px;
+    width: 389px;
     height: 135px;
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     justify-content: center;
+    align-items: center;
+    margin-left: 210px;
     
     
   }
@@ -207,7 +210,7 @@
 
     color: #ffffff;
     margin-top: 10px;
-    margin-left: -60px;
+    margin-left: 5px;
   }
 
   .model-content .checkout {
