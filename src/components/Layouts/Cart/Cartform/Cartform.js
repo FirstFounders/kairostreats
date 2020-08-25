@@ -55,7 +55,7 @@ class Cartform extends Component {
                     </div>
 
                     <div className= "submitField">
-                        <button>Proceed</button>
+                        <button>Pay</button>
                     </div>
 
                 </form>

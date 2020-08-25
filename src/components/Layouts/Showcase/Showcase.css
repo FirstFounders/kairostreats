@@ -2,7 +2,9 @@
     font-family: "CaviarDreams";
     src: url("/CaviarDreams.ttf"),
     } */
-
+*{
+    box-sizing: border-box;
+}
 .showcase-bg{
     background-image: url("./images/Group93bg.png");
     min-height: 100vh;
@@ -100,12 +102,25 @@
     font-weight: lighter; 
     /* margin-top: 15px;  */
     line-height: 69px;
+    animation: mySlideOut 0.4s linear;
+}
+
+@keyframes mySlideOut{
+    from{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .text-area .text p{
     font-family: 'caviardreams';
     font-size: 20px;
     margin-bottom: 35px;
+    animation: mySlideOut 0.3s linear 0.2s;
     line-height: 23px;
     font-weight: normal;
 }
@@ -198,12 +213,16 @@
         display: none;
     }
 
+    .overall-container{
+        margin: 0;
+    }
     .showcase-area{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 5rem;
+        margin-left: 3rem; 
         /* height: 40vh; */
     
     }
@@ -226,7 +245,10 @@
 
     /* .showcase-area .image-area .image-bg{
     } */
-
+    .text-area{
+        margin-right: 4rem; 
+        /* margin-bottom: 100px; */
+    }
     .text-area .text h1{
         font-family: 'Playfair Display';
         font-size: 25px;
@@ -239,9 +261,6 @@
         font-size: 18px;
     }
 
-    .svg-area{
-        display: none;
-    }
 
     .text-area .text button{
         margin-bottom: 35px;
@@ -252,7 +271,7 @@
         background-color: #ef476f;
         text-align: center;
         cursor: pointer;
-        width: 70%;
+        width: 95%;
         font-size: 19px;
         font-family: 'caviardreams';
         transition: 0.5s;
@@ -260,7 +279,12 @@
     
     .text-area .text button:hover {
         background-color: #ef476f;
-        width: 80%;
+        width: 100%;
+    }
+
+    .svg-area{
+        margin-bottom: 40px;
+        margin-right: 8.5rem;
     }
 }
 
