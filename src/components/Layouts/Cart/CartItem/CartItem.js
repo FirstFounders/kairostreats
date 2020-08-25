@@ -19,7 +19,7 @@ export default function CartItem({ product, remove, increase, decrease }) {
             </div>
             <div className='cart-cal'>
               {product.quantity > 1 && (
-                <span className='minus' onClick={decrease} >
+                <span className='minus' onClick={decrease}>
                   <svg
                     width='12'
                     height='13'
