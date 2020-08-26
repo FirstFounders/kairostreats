@@ -15,7 +15,7 @@ function CakeItem() {
   }, []);
 
   const { addProduct, cart } = cartContext;
-  const { cakes } = cakesContext;   
+  const { cakes } = cakesContext;  
 
   const isInCart = (product) => {
     return cart.find((item) => item.id === product.id);
@@ -34,24 +34,23 @@ function CakeItem() {
             <div className='cake-container'>
               <img
                 className='cake-gallery'
-                src={cake.picture}
-                alt={cake.name}
+                src={'http://127.0.0.1:8000/assets/images/cakes/'+cake.picture}
+                alt={cake.flavour}
               />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
                   {!isInCart(cake) ? (
                     <Link to={`/product/${cake.id}`}>order now</Link>
                   ) : (
-                    <Link>Added to cart</Link>
+                    <p>Added to cart</p>
                   )}
                 </div>
               </div>
             </div>
 
             <div className='cake-content'>
-              <h5>{cake.name}</h5>
-              <p>{cake.category}</p>
-              <h4>{formatCurrency(cake.size8)}</h4>
+              <h5>{cake.flavour}</h5>
+              <Link to={'/categories/'+cake.category}>{cake.category}</Link>
             </div>
           </div>
         ))}

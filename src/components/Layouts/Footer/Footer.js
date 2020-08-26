@@ -19,7 +19,7 @@ export default function Footer(){
                     <h3><a href = "mailto: onyinyekairos@gmail.com">onyinyekairos@gmail.com</a></h3>
                 </div>
                 <div className="mapBox">
-                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=800&amp;height=600&amp;hl=en&amp;q=1%20Seni%20Towobola%20Cl,%20Ilupeju,%20Lagos,%20Nigeria%20Lagos+(Kairos%20Treats)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <iframe frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=800&amp;height=600&amp;hl=en&amp;q=1%20Seni%20Towobola%20Cl,%20Ilupeju,%20Lagos,%20Nigeria%20Lagos+(Kairos%20Treats)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=52e9d59980545fb558958ccb418dd768e327f3ca'></script>
                 </div>
             </div>

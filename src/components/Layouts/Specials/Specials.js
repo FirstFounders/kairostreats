@@ -85,17 +85,17 @@ function Specials() {
 
       <div className='overall-special'>
         <div className='special-flex'>
-          {recommended_cakes.map((cake) => (
-            <div className='special-flex-box'>
+          {recommended_cakes.map((cake, id) => (
+            <div key={cake.id+cake.flavour+id} className='special-flex-box'>
               <Link to={`/product/${cake.id}`}>
                 <img
-                  src='https://i.ibb.co/1JJyMhk/Ellipse-14cake2.png'
+                src={'http://127.0.0.1:8000/assets/images/cakes/'+cake.picture}
                   alt='Ellipse-14cake2'
                 />
               </Link>
               <div key={cake.id} className='s-text'>
-                <h3>{cake.name}</h3>
-                <p>{formatCurrency(cake.size8)}</p>
+                <h3>{cake.flavour}</h3>
+                {/* <p>{formatCurrency(cake.size8)}</p> */}
               </div>
             </div>
           ))}

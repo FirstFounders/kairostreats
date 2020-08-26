@@ -9,7 +9,7 @@ function Home() {
     <div>
       <ShowCase />
       <CakeItem />
-      <CustomCake />
+      {/* <CustomCake /> */}
       <Specials />
     </div>
   );

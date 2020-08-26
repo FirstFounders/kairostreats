@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import Axios from "axios";
 import CakesContext from "./cakesContext";
 import CakesReducer from "./cakesReducer";
-import { GET_CAKES, GET_RECOMMENDED_CAKES, SET_LOADING } from "../ActionTypes";
+import { GET_CAKES, GET_RECOMMENDED_CAKES, SET_LOADING, GET_CATEGORY } from "../ActionTypes";
 
 const CakesState = (props) => {
   const initialState = {
@@ -10,6 +10,7 @@ const CakesState = (props) => {
     recommended_cakes: [],
     cake: {},
     category: [],
+    categories: [],
     loading: false,
   };
 
@@ -19,7 +20,6 @@ const CakesState = (props) => {
   const getAllCakes = async () => {
     setLoading();
     const response = await Axios.get("/products");
-    // console.log(response.data);
     dispatch({ type: GET_CAKES, payload: response.data.data });
   };
 
@@ -27,6 +27,11 @@ const CakesState = (props) => {
     setLoading();
     const response = await Axios.get("/recommended/products");
     dispatch({ type: GET_RECOMMENDED_CAKES, payload: response.data.data });
+  };
+  const getCategories = async () => {
+    setLoading();
+    const response = await Axios.get("/categories");
+    dispatch({ type: GET_CATEGORY, payload: response.data.data });
   };
 
   // GET CAKE
@@ -40,9 +45,11 @@ const CakesState = (props) => {
         recommended_cakes: state.recommended_cakes,
         cake: state.cake,
         category: state.category,
+        categories: state.categories,
         loading: state.loading,
         getAllCakes,
         getRecommendedCakes,
+        getCategories
       }}
     >
       {props.children}

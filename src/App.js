@@ -28,14 +28,14 @@ function App() {
             <Navbar />
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route path='/forher' component={ForHer} />
-              <Route path='/forhim' component={ForHim} />
+              <Route path='/categories/:category' component={ForHer} />
+              {/* <Route path='/forhim' component={ForHim} />
               <Route path='/birthday' component={Birthday} />
-              <Route path='/wedding' component={Wedding} />
-              <Route path='/cakeitem' component={CakeItem} />
-              <Route path='/customizepage' component={CustomizePage} />
+              <Route path='/wedding' component={Wedding} /> */}
+              {/* <Route path='/cakeitem' component={CakeItem} /> */}
+              {/* <Route path='/customizepage' component={CustomizePage} /> */}
               <Route path='/product/:id' component={OrderNow} />
-              <Route path='/specialpage' component={SpecialPage} />
+              {/* <Route path='/specialpage' component={SpecialPage} /> */}
               <Route path='/order/successful' component={success} />
             </Switch>
             <Footer />

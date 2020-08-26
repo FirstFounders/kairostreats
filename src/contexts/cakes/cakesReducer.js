@@ -1,4 +1,4 @@
-import { GET_CAKES, SET_LOADING, GET_RECOMMENDED_CAKES } from "../ActionTypes";
+import { GET_CAKES, SET_LOADING, GET_RECOMMENDED_CAKES, GET_CATEGORY } from "../ActionTypes";
 
 export default (state, action) => {
   switch (action.type) {
@@ -6,6 +6,12 @@ export default (state, action) => {
       return {
         ...state,
         cakes: action.payload,
+        loading: false,
+      };
+    case GET_CATEGORY:
+      return {
+        ...state,
+        categories: action.payload,
         loading: false,
       };
     case GET_RECOMMENDED_CAKES:

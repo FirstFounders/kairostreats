@@ -5,19 +5,19 @@ import "./ForHer.css";
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../helpers";
 
-function ForHer() {
+function ForHer(props) {
   const cakesContext = useContext(CakesContext);
   useEffect(() => {
     cakesContext.getAllCakes();
   }, []);
   let { cakes } = cakesContext;
-
-  cakes = cakes.filter((customize) => customize.category === "For Her");
+const id = props.match.params.category;
+  cakes = cakes.filter((customize) => customize.category === id);
 
   return (
     <div className='Her-area'>
       <div className='Her-heading'>
-        <h1>Cake For Her</h1>
+        <h1>Cake {id}</h1>
         <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
       </div>
       {cakes.length > 0 ? (
@@ -29,8 +29,8 @@ function ForHer() {
                 <div className='cake-container'>
                   <img
                     className='cake-gallery'
-                    src={cake.picture}
-                    alt={cake.name}
+                src={'http://127.0.0.1:8000/assets/images/cakes/'+cake.picture}
+                    alt={cake.flavour}
                   />
                   <div className='cake-overlay overlay-left'>
                     <div className='cake-text'>
@@ -40,9 +40,8 @@ function ForHer() {
                 </div>
 
                 <div className='cake-content'>
-                  <h5>{cake.name}</h5>
-                  <p>{cake.category}</p>
-                  <h4>{formatCurrency(cake.size8)}</h4>
+                  <h5>{cake.flavour}</h5>
+              <Link to={'/categories/'+cake.category}>{cake.category}</Link>
                 </div>
               </div>
             ))}

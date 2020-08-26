@@ -36,7 +36,6 @@ class ShowCase extends Component {
         pars[i].style.display = "none";
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      console.log(slideIndex)
       // if(slideIndex == 0){
       //   slideIndex=1;
       // }
@@ -139,19 +138,19 @@ class ShowCase extends Component {
             <div className='image-area'>
               <div className='white-bg'>
                 <img
-                  src='https://i.ibb.co/88x9pSZ/image-1image-bg.png'
+                  src={require('./images/1.jpeg')}
                   alt='background-bg'
                 />
                 <img
-                  src='https://i.ibb.co/2Fr9Ytz/with-strawberry.jpg'
+            src={require('./images/2.jpeg')}
                   alt='background-bg'
                 />
                 <img
-                  src='https://i.ibb.co/88x9pSZ/image-1image-bg.png'
+            src={require('./images/3.jpeg')}
                   alt='background-bg'
                 />
                 <img
-                  src='https://i.ibb.co/2Fr9Ytz/with-strawberry.jpg'
+            src={require('./images/4.jpeg')}
                   alt='background-bg'
                 />
               </div>
@@ -160,32 +159,26 @@ class ShowCase extends Component {
           <div className='text-area'>
             <div className='text'>
               <h1>
-                Bam-Bam Lala <br></br>Special Offer
+                Cake is a <br /> love language
               </h1>
               <h1>
-                CHUKWU gozie <br></br>Special Offer
+                Everything  <br />we bake
+              </h1>
+              <h1>Baking the <br /> difference
               </h1>
               <h1>
-                Bam Teddy <br></br>Special Offer
-              </h1>
-              <h1>
-                Folla man <br></br>Special Offer
+                Cake is a <br /> love language
               </h1>
               <p>
-                Get gozie for your loved ones
-                <br></br>this season!
+              Our delightful cakes are a <br />great way to show love. Try us!
               </p>
               <p>
-                Get chilolo for your loved ones
-                <br></br>this season!
+              we bake with <br /> love!
+              </p>
+              <p>we create delicious <br /> memories.
               </p>
               <p>
-                Get Teddy for your loved ones
-                <br></br>this season!
-              </p>
-              <p>
-                Get man for your loved ones
-                <br></br>this season!
+              Edible <br /> Memories!
               </p>
               <Link to='/cakeitem'>
                 <button>Shop!</button>

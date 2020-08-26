@@ -35,12 +35,13 @@ export default function Cart() {
             </Fragment>
           ) : (
             <Fragment>
-              {cart.map((item) => (
+              {cart.map((item, id) => (
                 <CartItem
                   product={item}
                   remove={() => removeProduct(item)}
                   increase={() => increase(item)}
                   decrease={() => decrease(item)}
+                  key={id}
                 />
               ))}
               <h2>Total</h2>

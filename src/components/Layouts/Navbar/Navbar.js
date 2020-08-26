@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import CakesContext from "../../../contexts/cakes/cakesContext";
 import { Link } from "react-router-dom";
 import CartContext from "../../../contexts/cart/cartContext";
 import { Drawer } from "antd";
@@ -7,9 +8,15 @@ import "./Navbar.css";
 
 function Navbar() {
   const cartContext = useContext(CartContext);
+  const cakesContext = useContext(CakesContext);
+
+  useEffect(() => {
+  cakesContext.getCategories();
+}, []);
   const [visible, setVisible] = useState(false);
 
   const { cart } = cartContext;
+  const { categories } = cakesContext;
   const showDrawer = () => {
     setVisible(true);
   };
@@ -33,18 +40,11 @@ function Navbar() {
             Categories <i className='fa fa-caret-down' aria-hidden='true'></i>
           </Link>
           <ul className='sub-menu'>
-            <li>
-              <Link to='/forher'>Cakes for Her</Link>
+          {categories.map((category) => (
+            <li key={category.category}>
+              <Link to={'/categories/'+category.category}>{category.category}</Link>
             </li>
-            <li>
-              <Link to='/forhim'>Cakes for Him</Link>
-            </li>
-            <li>
-              <Link to='/birthday'>Birthday cakes</Link>
-            </li>
-            <li>
-              <Link to='/wedding'>Wedding cakes</Link>
-            </li>
+          ))}
           </ul>
         </li>
 
@@ -57,21 +57,11 @@ function Navbar() {
             Cakes <i className='fa fa-caret-down' aria-hidden='true'></i>
           </Link>
           <ul className='sub-menu'>
-            <li>
-              <Link to='/forher'>Cakes for Her</Link>
+          {categories.map((category) => (
+            <li key={category.category}>
+              <Link to={'/categories/'+category.category}>{category.category}</Link>
             </li>
-            <li>
-              <Link to='/forhim'>Cakes for Him</Link>
-            </li>
-            <li>
-              <Link to='/birthday'>Birthday cakes</Link>
-            </li>
-            <li>
-              <Link to='/wedding'>Wedding cakes</Link>
-            </li>
-            <li>
-              <Link to='/customizepage'>Customize cakes</Link>
-            </li>
+          ))}
           </ul>
         </li>
       </ul>
@@ -116,8 +106,8 @@ function Navbar() {
                 <path
                   d='M21 1L1 22M1 1L21 22'
                   stroke='white'
-                  stroke-width='2'
-                  stroke-linecap='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
                 />
               </svg>
             </span>

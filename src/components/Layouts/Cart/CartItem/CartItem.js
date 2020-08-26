@@ -10,12 +10,16 @@ export default function CartItem({ product, remove, increase, decrease }) {
       <div className='cart-sec'>
         <div className='cart-flex'>
           <div className='cart-img'>
-            <img src={product.picture} alt='' />
+                  <img
+                    className='cake-gallery'
+                src={'http://127.0.0.1:8000/assets/images/cakes/'+product.picture}
+                    alt={product.flavour}
+                  />
           </div>
           <div className='cart-container'>
             <div>
-              <h4>{product.name}</h4>
-              <h5 className='category'>{product.category}</h5>
+              <h4>{product.flavour}</h4>
+              <Link to={'/categories/'+product.category}>{product.category}</Link>
             </div>
             <div className='cart-cal'>
               {product.quantity > 1 && (
