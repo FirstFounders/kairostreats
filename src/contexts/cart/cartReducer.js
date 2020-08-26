@@ -86,6 +86,7 @@ export const CartReducer = (state, action) => {
 
     case CLEAR_CART:
       return {
+        ...sumItems([]),
         cart: [],
         loading: false,
       };

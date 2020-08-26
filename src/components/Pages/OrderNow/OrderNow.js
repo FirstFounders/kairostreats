@@ -153,6 +153,7 @@ export default function OrderNow(props) {
                 onCancel={handleCancel}
                 okButtonProps={{ disabled: true }}
                 cancelButtonProps={{ disabled: true }}
+                className='Order-Modal'
                 bodyStyle={{
                   // display: 'none',
                   background: "#F24472",
