@@ -12,6 +12,8 @@ class ShowCase extends Component {
     var i;
     const slides = document.querySelectorAll(".white-bg img");
     const dots = document.querySelectorAll(".dot");
+    const heads = document.querySelectorAll(".text h1");
+    const pars = document.querySelectorAll(".text p");
     if (slideIndex > slides.length) {
       slideIndex = 1;
       slidesArray = {
@@ -19,14 +21,28 @@ class ShowCase extends Component {
         slidesIndex: 1,
       };
     }
-    if(slides.length > 1 && dots.length > 1){
+    if (slideIndex < 1) {
+      slideIndex = 4;
+      slidesArray = {
+        ...slidesArray,
+        slidesIndex: 4,
+      };
+    }
+    if(slides.length > 1 && dots.length > 1 && heads.length > 1 && pars.length > 1){
 
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        heads[i].style.display = "none";
+        pars[i].style.display = "none";
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      // console.log(slides)
+      console.log(slideIndex)
+      // if(slideIndex == 0){
+      //   slideIndex=1;
+      // }
       slides[slideIndex - 1].style.display = "block";
+      heads[slideIndex - 1].style.display = "block";
+      pars[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
       this.setState({
         ...slidesArray,
@@ -146,8 +162,29 @@ class ShowCase extends Component {
               <h1>
                 Bam-Bam Lala <br></br>Special Offer
               </h1>
+              <h1>
+                CHUKWU gozie <br></br>Special Offer
+              </h1>
+              <h1>
+                Bam Teddy <br></br>Special Offer
+              </h1>
+              <h1>
+                Folla man <br></br>Special Offer
+              </h1>
               <p>
-                Get bambam for your loved ones
+                Get gozie for your loved ones
+                <br></br>this season!
+              </p>
+              <p>
+                Get chilolo for your loved ones
+                <br></br>this season!
+              </p>
+              <p>
+                Get Teddy for your loved ones
+                <br></br>this season!
+              </p>
+              <p>
+                Get man for your loved ones
                 <br></br>this season!
               </p>
               <Link to='/cakeitem'>

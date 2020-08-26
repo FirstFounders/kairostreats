@@ -11,10 +11,12 @@ import { formatCurrency } from "../../../helpers";
 
 export default function Cart() {
   const cartContext = useContext(CartContext);
-  const [visible, setVisible] = useState(false);
 
   const { cart, totalPrice, removeProduct, increase, decrease } = cartContext;
+  // const [showButton, setShowButton] = useState(false);
+  // const onClick = ()=> setShowButton(true);
   // const [cart, setCart] = useState([1, 2, 2]);
+  const [visible, setVisible] = useState(false)
   return (
     <div>
       <div className='overlay-header'>
@@ -35,7 +37,6 @@ export default function Cart() {
             <Fragment>
               {cart.map((item) => (
                 <CartItem
-                  key={item.id}
                   product={item}
                   remove={() => removeProduct(item)}
                   increase={() => increase(item)}

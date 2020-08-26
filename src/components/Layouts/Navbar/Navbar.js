@@ -51,7 +51,33 @@ function Navbar() {
         <li className='menu'>
           <Link to='/customizepage'>Customize Cake</Link>
         </li>
+
+        <li className='screen-menu'>
+          <Link to='/'>
+            Cakes <i className='fa fa-caret-down' aria-hidden='true'></i>
+          </Link>
+          <ul className='sub-menu'>
+            <li>
+              <Link to='/forher'>Cakes for Her</Link>
+            </li>
+            <li>
+              <Link to='/forhim'>Cakes for Him</Link>
+            </li>
+            <li>
+              <Link to='/birthday'>Birthday cakes</Link>
+            </li>
+            <li>
+              <Link to='/wedding'>Wedding cakes</Link>
+            </li>
+            <li>
+              <Link to='/customizepage'>Customize cakes</Link>
+            </li>
+          </ul>
+        </li>
       </ul>
+      
+
+
       <ul>
         <li className='open-modal' onClick={showDrawer}>
           <img src={require("./images/basket.png")} alt="Kairo's" />

@@ -89,6 +89,10 @@ nav a:hover{
     font-family: 'caviardreams';
 }
 
+.screen-menu{
+    display: none;
+}
+
 .sub-menu li{
     color: #ef476f;
 }
@@ -131,6 +135,7 @@ nav a:hover{
     .ant-drawer-content-body
     {
         width: 700px !important;
+        box-sizing: border-box;
 
     }
 
@@ -140,11 +145,30 @@ nav a:hover{
         
     }
 
+    .menu{
+        display: none;
+    }
+
+    .screen-menu{
+        display: block;
+        position: relative;
+        
+    }
+
+    .screen-menu:hover .sub-menu{
+        display: block;
+    }
+
+    .screen-menu li{
+        color: #ef476f;
+}
+
     .ant-drawer-content-wrapper,
     .ant-drawer-content-body
     {
         width: 390px !important;
         overflow-x: hidden;
+        box-sizing: border-box;
     }
 
     

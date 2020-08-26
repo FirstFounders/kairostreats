@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../helpers";
 
 function CakeItem() {
+
   const cakesContext = useContext(CakesContext);
   const cartContext = useContext(CartContext);
 
@@ -14,7 +15,7 @@ function CakeItem() {
   }, []);
 
   const { addProduct, cart } = cartContext;
-  const { cakes } = cakesContext;
+  const { cakes } = cakesContext;   
 
   const isInCart = (product) => {
     return cart.find((item) => item.id === product.id);
