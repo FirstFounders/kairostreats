@@ -103,8 +103,10 @@ nav a:hover{
     background-color: #F57093;
     border-radius: 50%;
 }
-.close-modal-btn{
+.close-modal-btn svg{
     cursor: pointer;
+    justify-content: center;
+    margin-top: 13px;
     
 }
 
@@ -166,6 +168,7 @@ nav a:hover{
     .ant-drawer-content-wrapper,
     .ant-drawer-content-body
     {
+        overflow: hidden;
         width: 390px !important;
         overflow-x: hidden;
         box-sizing: border-box;

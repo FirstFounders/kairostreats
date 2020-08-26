@@ -206,32 +206,6 @@ export default function OrderNow(props) {
 
           <div className='add-cart'>
             <p className='total'>{formatCurrency(size)}</p>
-            <span className='minus'>
-              <svg
-                width='12'
-                height='13'
-                viewBox='0 0 12 3'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path d='M0 0H12V3H0V0Z' fill='white' />
-              </svg>
-            </span>
-            <span className='one'>1</span>
-            <span className='plus'>
-              <svg
-                width='13'
-                height='13'
-                viewBox='0 0 13 13'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M4.82255 7.74214H0.210449V4.82255H4.82255V0.210449H7.75624V4.82255H12.3683V7.74214H7.75624V12.3683H4.82255V7.74214Z'
-                  fill='White'
-                />
-              </svg>
-            </span>
             <div className='add-to-cart'>
               <button onClick={() => addToCart(product)}>Add to cart</button>
             </div>

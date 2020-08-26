@@ -40,7 +40,7 @@
     background-color: #ef476f;
     text-align: center;
     cursor: pointer;
-    width: 20%;
+    width: 30%;
     font-size: 19px;
     font-family: 'Roboto Slab', serif;
     transition: 0.5s;
@@ -48,7 +48,7 @@
 
 .custom-img button:hover {
     background-color: #ef476f;
-    width: 30%;
+    width: 35%;
 }
 .custom-container div{
     flex:1;
