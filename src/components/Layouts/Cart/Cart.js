@@ -45,7 +45,7 @@ export default function Cart() {
               ))}
               <h2>Total</h2>
               <p>{formatCurrency(totalPrice)}</p>
-              <button className='checkout' onClick={() => setVisible(true)}>
+              <button id="form" className='checkout' onClick={() => setVisible(true)}>
                 Check Out
               </button>
               {visible && <Cartform />}

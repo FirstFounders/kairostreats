@@ -97,8 +97,8 @@ export default function OrderNow(props) {
                 </div>
               ))}
           </div>
-          <p>Select size</p>
           <div className='flavor-size'>
+          <p>Select size</p>
             <div>
               <div id='ck-button'>
                 <label>

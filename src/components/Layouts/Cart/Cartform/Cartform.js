@@ -1,9 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./Cartform.css";
 import CartContext from "../../../../contexts/cart/cartContext";
 import Axios from "axios";
 import { Button, Modal } from "antd";
 import { EllipsisOutlined } from "@ant-design/icons";
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Cartform = () => {
   const cartContext = useContext(CartContext);
@@ -45,8 +47,13 @@ const Cartform = () => {
     });
     setVisible(false);
   };
+
+  useEffect(() => {
+    Aos.init({duration: 2000})
+  }, []);
+
   return (
-    <div className='formContainer'>
+    <div data-aos="fade-up" className='formContainer' id="form">
       <form onSubmit={handleSubmit}>
         <div className='inputField'>
           <label htmlFor='name'>Name</label> <br />

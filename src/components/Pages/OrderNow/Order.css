@@ -44,7 +44,7 @@
 }
 
 /* Select Flavor section */
-.ant-radio-button {
+.flavor-category input {
   color: #000000;
   line-height: 30px;
   font-size: 16px;
@@ -78,7 +78,7 @@
 
 .ant-radio-button-wrapper:nth-child(2) {
   margin-right: 1em;
-  border-left: none;
+  /* border-left: none; */
   /* outline: none; */
 }
 
@@ -175,7 +175,7 @@
 }
 
 .add-cart {
-  margin-bottom: 120px;
+  margin-top: 50px;
 }
 
 .total {
@@ -195,32 +195,11 @@
   color: #000000;
 }
 
-.add-cart .minus {
-  cursor: pointer;
-  margin-right: 1em;
-  padding: 0 5px;
-  background-color: #f24472;
-  border-radius: 50%;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-}
-
-.add-cart .plus {
-  cursor: pointer;
-  margin-left: 1em;
-  padding: 0 5px;
-  background-color: #f24472;
-  border-radius: 50%;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-}
 
 .add-to-cart button {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
-  padding: 0 20px 6px;
+  padding: 10px 20px 10px;
   border: none;
   outline: none;
   font-weight: bold;
@@ -228,8 +207,13 @@
   background-color: #f24472;
   cursor: pointer;
   font-size: 19px;
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; */
   font-family: "Cormorant Garamond", serif;
+  width: 95%;
+}
+
+.add-to-cart button:hover{
+  background-color: #f57093;
 }
 
 .Order-Modal .ant-modal-content {
@@ -371,11 +355,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin-top: 50px;
   }
 
   .order-content {
-    margin-left: 40px;
+    margin-left: -20px;
     /* margin-top: 180px; */
   }
 
@@ -429,8 +413,8 @@
   }
 
   .order-container img {
-    width: 250px;
-    height: 250px;
+    width: 275px;
+    height: 275px;
     box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
     object-fit: cover;
     object-position: center;
@@ -477,4 +461,3 @@
   color: #fff;
 }
 
-/* RADIO */

@@ -138,6 +138,7 @@ nav a:hover{
     {
         width: 700px !important;
         box-sizing: border-box;
+        overflow: hidden;
 
     }
 
@@ -168,16 +169,16 @@ nav a:hover{
     .ant-drawer-content-wrapper,
     .ant-drawer-content-body
     {
-        overflow: hidden;
+        overflow: hidden !important;
         width: 390px !important;
-        overflow-x: hidden;
-        box-sizing: border-box;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important; 
     }
 
     
-      
-      
-      
+    
+    
+    
 
 }
 
