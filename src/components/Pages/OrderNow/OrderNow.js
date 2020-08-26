@@ -17,6 +17,7 @@ export default function OrderNow(props) {
   const [size, setSize] = useState("");
   const [flavours, setFlavours] = useState([]);
   const cartContext = useContext(CartContext);
+
   useEffect(() => {
     Axios.get(`/products/${props.match.params.id}`).then((dt) => {
       // console.log(dt.data.data);
@@ -27,14 +28,20 @@ export default function OrderNow(props) {
   // console.log(product.flavours);
 
   const { addProduct } = cartContext;
-
+  const addToFlavours = (flavor) => {
+    if (flavours.includes(flavor)) {
+      setFlavours(flavours.filter((flav) => flav !== flavor));
+    } else {
+      setFlavours([...flavours, flavor]);
+    }
+  };
+  console.log(size);
   const addToCart = (prod) => {
     prod.price = size;
     prod.flavours = flavours;
     delete prod.size8;
     delete prod.size10;
     delete prod.size12;
-
     addProduct(prod);
     window.location.reload();
   };
@@ -75,32 +82,59 @@ export default function OrderNow(props) {
           <h5>{product.category}</h5>
           <div className='flavor-category'>
             <p>Select flavour</p>
-            <Radio.Group
-              defaultValue=''
-              buttonStyle='solid'
-              onChange={(e) => setFlavours([e.target.value])}
-            >
-              {product.flavours &&
-                product.flavours.map((flav) => (
-                  <Radio.Button value={flav.flavour} key={flav.flavour}>
-                    {flav.flavour}
-                  </Radio.Button>
-                ))}
-            </Radio.Group>
+
+            {product.flavours &&
+              product.flavours.map((flav) => (
+                <div id='ck-button' key={flav.flavour}>
+                  <label>
+                    <input
+                      type='checkbox'
+                      value={flav.flavour}
+                      onClick={(e) => addToFlavours(e.target.value)}
+                    />
+                    <span>{flav.flavour}</span>
+                  </label>
+                </div>
+              ))}
           </div>
           <p>Select size</p>
           <div className='flavor-size'>
-            <Radio.Group
-              defaultValue={product.size8}
-              onChange={(e) => setSize(e.target.value)}
-              buttonStyle='solid'
-            >
-              <Radio.Button value={product.size8}>8"</Radio.Button>
-
-              <Radio.Button value={product.size10}>10"</Radio.Button>
-
-              <Radio.Button value={product.size12}>12"</Radio.Button>
-            </Radio.Group>
+            <div>
+              <div id='ck-button'>
+                <label>
+                  <input
+                    type='radio'
+                    name='size'
+                    defaultChecked
+                    defaultValue={product.size8}
+                    onClick={(e) => setSize(e.target.value)}
+                  />
+                  <span>size 8</span>
+                </label>
+              </div>
+              <div id='ck-button'>
+                <label>
+                  <input
+                    type='radio'
+                    name='size'
+                    defaultValue={product.size10}
+                    onClick={(e) => setSize(e.target.value)}
+                  />
+                  <span>size 10</span>
+                </label>
+              </div>
+              <div id='ck-button'>
+                <label>
+                  <input
+                    type='radio'
+                    name='size'
+                    defaultValue={product.size12}
+                    onClick={(e) => setSize(e.target.value)}
+                  />
+                  <span>size 12</span>
+                </label>
+              </div>
+            </div>
           </div>
           {product.isCustomizable === 1 && (
             <Fragment>
