@@ -16,6 +16,7 @@ import Birthday from "./components/Pages/Birthdays/Birthday";
 import Wedding from "./components/Pages/Wedding/Wedding";
 import SpecialPage from "./components/Pages/SpecialPage/SpecialPage";
 import CartState from "./contexts/cart/CartState";
+import success from "./components/Pages/success/success";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path='/customizepage' component={CustomizePage} />
               <Route path='/product/:id' component={OrderNow} />
               <Route path='/specialpage' component={SpecialPage} />
+              <Route path='/order/successful' component={success} />
             </Switch>
             <Footer />
           </div>

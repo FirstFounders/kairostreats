@@ -28,7 +28,7 @@ function CakeItem() {
       </div>
 
       <div className='cake-display'>
-        {cakes.map((cake, idx) => (
+        {cakes.slice(0, 4).map((cake, idx) => (
           <div key={idx}>
             <div className='cake-container'>
               <img

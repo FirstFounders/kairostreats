@@ -2,16 +2,22 @@ import React, { useState, useContext } from "react";
 import "./Cartform.css";
 import CartContext from "../../../../contexts/cart/cartContext";
 import Axios from "axios";
+import { Button, Modal } from "antd";
+import { EllipsisOutlined } from "@ant-design/icons";
 
 const Cartform = () => {
   const cartContext = useContext(CartContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [content, setContent] = useState("");
   const [address, setAddress] = useState("");
-  const { cart, totalPrice, checkout } = cartContext;
+  const { cart, totalPrice, clearCart } = cartContext;
 
   const handleSubmit = (e) => {
+    setLoading(true);
     e.preventDefault();
     const formData = {
       name: name,
@@ -23,8 +29,21 @@ const Cartform = () => {
     };
     console.log(formData);
     Axios.post("/order", formData).then((res) => {
+      setVisible(true);
       console.log(res);
+      setContent(
+        <div style={{ width: "100%", height: "auto" }}>
+          <iframe
+            src={res.data.url}
+            title=' '
+            height='700px'
+            width='100%'
+          ></iframe>
+        </div>
+      );
+      setLoading(false);
     });
+    setVisible(false);
   };
   return (
     <div className='formContainer'>
@@ -68,11 +87,30 @@ const Cartform = () => {
             required
           />
         </div>
-
         <div className='submitField'>
-          <button type='submit'>Proceed</button>
+          <button type='submit'>
+            {loading ? <EllipsisOutlined /> : "Pay"}
+          </button>
         </div>
       </form>
+      <Modal
+        title='Payment Page'
+        centered
+        closable
+        footer={null}
+        visible={visible}
+        bodyStyle={{ background: "#fff", padding: "0px", margin: "0px" }}
+        style={{ background: "#fff", padding: "0px", margin: "0px" }}
+        maskClosable={false}
+        onOk={() => this.setModal1Visible(false)}
+        onCancel={() => {
+          clearCart();
+          setLoading(false);
+          setVisible(false);
+        }}
+      >
+        {content}
+      </Modal>
     </div>
   );
 };

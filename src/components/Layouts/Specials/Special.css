@@ -1,131 +1,125 @@
-.bg-special{
-    background-color: #ffffff;
+.bg-special {
+  background-color: #ffffff;
 }
 
-.special-heading{
-    margin-top: 50px;
-    text-align: center;
+.special-heading {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.special-heading img{
-    margin-top: 15px;
+.special-heading img {
+  margin-top: 15px;
 }
-.special-heading h1{
-    font-family: 'Playfair Display';
-    font-size: 36px;
-    font-weight: lighter;
-    line-height: 48px;
-    color: #F24472;
-}
-
-.special-flex{
-    margin: auto;
-    margin-top: 30px;
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row nowrap;
-    overflow: auto;
-    width: 95%;
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
-    scroll-behavior: smooth;
+.special-heading h1 {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: lighter;
+  line-height: 48px;
+  color: #f24472;
 }
 
+.special-flex {
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  overflow: auto;
+  width: 95%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
 
 .special-flex::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.special-flex > div {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.special-flex img {
+  cursor: pointer;
+}
+.special-flex .s-text h3 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  color: #f24472;
+  font-size: 20px;
+  line-break: 30px;
+}
+
+.special-flex .s-text p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.special-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-svg .move {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.special-svg .move:hover {
+  background: #000000;
+}
+
+.special-svg .move:hover svg path {
+  transition: all 0.5s ease-out;
+}
+
+.special-svg .move:hover svg path {
+  fill: #ffffff !important;
+}
+
+.special-svg .dot {
+  width: 5px;
+  height: 5px;
+  border: 0.5px solid #000000;
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .special-flex {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
   }
-  
-.special-flex > div{
-    padding: 20px;
-    box-sizing: border-box;
-}
 
-.special-flex img{
-    cursor: pointer;
-}
-.special-flex .s-text h3{
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    color: #F24472;
-    font-size: 20px;
-    line-break: 30px;
-}
-
-.special-flex .s-text p{
-    text-align: center;
-    font-size: 16px;
+  .special-heading h1 {
+    margin-top: 25px;
     line-height: 30px;
-    font-weight: bold;
-    font-family:  serif;
-}
+  }
 
+  .special-heading img {
+    margin-top: 5px;
+  }
 
-.special-svg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.special-svg .move{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000000;
-    margin:10px;
+  .special-flex img {
     cursor: pointer;
-    transition: all 0.5s ease-out;
-}
-
-.special-svg .move:hover{
-    background: #000000;
-}
-
-.special-svg .move:hover svg path{
-    transition: all 0.5s ease-out;
-}
-
-.special-svg .move:hover svg path{
-    fill: #ffffff !important;
-}
-
-.special-svg .dot{
-    width: 5px;
-    height: 5px;
-    border: 0.5px solid #000000;
-    border-radius: 50%;
-    margin:2px;
-    cursor: pointer;
-}
-
-
-
-@media(max-width: 500px){
-    .special-flex{
-        margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        flex-flow: row;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: nowrap;
-        
-    }
-
-    .special-heading h1{
-        margin-top: 25px;
-        line-height: 30px;
-    }
-    
-    .special-heading img{
-        margin-top: 5px;
-    }
-
-    .special-flex img{
-        cursor: pointer;
-    }
-
+  }
 }
