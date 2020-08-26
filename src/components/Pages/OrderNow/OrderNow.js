@@ -23,7 +23,7 @@ export default function OrderNow(props) {
     Axios.get(`/products/${props.match.params.id}`).then((dt) => {
       // console.log(dt.data.data);
       setProduct(dt.data.data);
-      setSize(JSON.parse(dt.data.data.pricing).size8?JSON.parse(dt.data.data.pricing).size8 : JSON.parse(dt.data.data.pricing).price);
+      setSize(dt.data.data.pricing.size8?dt.data.data.pricing.size8 : dt.data.data.pricing.price);
     });
   }, [props.match.params.id]);
   // console.log(product.flavours);
@@ -73,7 +73,7 @@ export default function OrderNow(props) {
           <div>
                     <img
                       className='cake-gallery'
-                  src={'http://127.0.0.1:8000/assets/images/cakes/'+product.picture}
+                  src={'https://kairostreats.com/assets/images/cakes/'+product.picture}
                       alt={product.flavour}
                     />
           </div>
@@ -85,8 +85,8 @@ export default function OrderNow(props) {
             <p>Select Size</p>
             <div>
             {
-              product.pricing && JSON.parse(product.pricing)?
-              Object.entries(JSON.parse(product.pricing)).map(([key,value])=>{
+              product.pricing && product.pricing?
+              Object.entries(product.pricing).map(([key,value])=>{
                 return(
                 <div id='ck-button' key={value}>
                   <label>

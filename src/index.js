@@ -4,7 +4,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import Axios from "axios";
 
-Axios.defaults.baseURL = "http://127.0.0.1:8000/api/v1";
+Axios.defaults.baseURL = "https://kairostreats.com/api/v1";
 const headers = {
   "Cache-Control": "no - cache, private",
   "X-RateLimit-Limit": 60,

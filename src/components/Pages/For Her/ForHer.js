@@ -29,7 +29,7 @@ const id = props.match.params.category;
                 <div className='cake-container'>
                   <img
                     className='cake-gallery'
-                src={'http://127.0.0.1:8000/assets/images/cakes/'+cake.picture}
+                src={'https://kairostreats.com/assets/images/cakes/'+cake.picture}
                     alt={cake.flavour}
                   />
                   <div className='cake-overlay overlay-left'>
