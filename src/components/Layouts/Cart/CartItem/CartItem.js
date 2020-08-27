@@ -8,8 +8,8 @@ import CartContext from "../../../../contexts/cart/cartContext";
 export default function CartItem({ product, remove }) {
   const [quan, setQty] = useState(product.quantity);
   const cartContext = useContext(CartContext);
-  console.log(product.quantity);
-  const { cart, totalPrice, removeProduct, increase, decrease } = cartContext;
+
+  const { increase, decrease } = cartContext;
   return (
     <div className='overall-cart'>
       <div className='cart-sec'>
@@ -37,7 +37,6 @@ export default function CartItem({ product, remove }) {
                   className='minus'
                   onClick={(e) => {
                     e.preventDefault();
-                    console.log(quan);
                     setQty((quan) => quan - 1);
                     decrease(product, quan);
                   }}
@@ -58,7 +57,6 @@ export default function CartItem({ product, remove }) {
                 className='plus'
                 onClick={(e) => {
                   e.preventDefault();
-                  // console.log(quan);
                   setQty((quan) => quan + 1);
                   increase(product, quan);
                 }}
