@@ -25,8 +25,8 @@ export default function CartItem({ product, remove, increase, decrease }) {
               {product.quantity > 1 && (
                 <span className='minus' onClick={decrease}>
                   <svg
-                    width='12'
-                    height='13'
+                    width='11'
+                    height='12'
                     viewBox='0 0 12 3'
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'
@@ -38,8 +38,8 @@ export default function CartItem({ product, remove, increase, decrease }) {
               <span className='one'>{product.quantity}</span>
               <span className='plus' onClick={increase}>
                 <svg
-                  width='13'
-                  height='13'
+                  width='11'
+                  height='12'
                   viewBox='0 0 13 13'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'

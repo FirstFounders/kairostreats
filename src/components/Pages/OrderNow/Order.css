@@ -27,24 +27,21 @@
   font-style: normal;
   font-size: 24px;
   line-height: 30px;
+  font-family: 'Caviar Dreams';
+  font-weight: bold;
 }
 
-.order-content h5 {
-  text-decoration: underline;
-  font-size: 16px;
-  color: #cccccc;
-  font-weight: lighter;
-  line-height: 19px;
-}
+
 
 .order-content p {
   font-size: 16px;
   font-style: normal;
   line-height: 35px;
+  font-family: 'Caviar Dreams';
 }
 
 /* Select Flavor section */
-.flavor-category input {
+.ck-button label input {
   color: #000000;
   line-height: 30px;
   font-size: 16px;
@@ -57,87 +54,54 @@
   border-radius: 5px;
   /* background-color: #ffffff; */
 }
-.ant-radio-button-wrapper {
-  border: none;
-  border-left-style: none;
-}
-.ant-radio-button-inner {
-  border: none;
-  border-left: none;
-}
 
-.ant-radio-button-wrapper:hover {
-  background-color: #f24472;
-  color: #ffffff;
-}
-
-.ant-radio-button-wrapper:first-of-type {
-  margin-right: 1em;
-  border: none;
-}
-
-.ant-radio-button-wrapper:nth-child(2) {
-  margin-right: 1em;
-  /* border-left: none; */
-  /* outline: none; */
-}
-
-.ant-radio-button-wrapper:nth-child(3) {
-  margin-right: 1em;
-  border-left: none;
-}
-
-.ant-radio-group-solid
-  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  color: #fff;
-  background: #f24472;
-  border-color: #f24472;
-  outline: none;
-}
-/* Flavor-size */
-.flavor-size button {
-  cursor: pointer;
-  outline: none;
+/* Sizes Button */
+#ck-button,.radio-toolbar {
+  margin: 4px;
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 4px;
   border: 1px solid #f24472;
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 0px 12px 5px;
-  font-style: normal;
-  font-weight: bold;
+  overflow: auto; 
+  display: inline-block;
+  
+}
+#ck-button:hover {
+  background: #f2447257;
+}
+
+#ck-button label {
+  cursor: pointer;
+  float: left;
   font-size: 16px;
-  line-height: 30px;
-  color: #000000;
+  width: auto;
+}
+#ck-button label span {
+  text-align: center;
+  padding: 3px 0px;
+  display: block;
+  padding: 4px 10px;
+  font-family: 'Caviar Dreams';
+  font-weight: bold;
 }
 
-.flavor-size button:hover {
+#ck-button label input {
+  position: absolute;
+  top: -20px;
+}
+
+#ck-button input:checked + span {
+  padding: 4px 10px;
   background-color: #f24472;
-  color: #ffffff;
+  color: #fff;
 }
 
-.flavor-size button:nth-child(1) {
-  margin-right: 1em;
-}
 
-.flavor-size button:nth-child(2) {
-  margin-right: 1em;
-}
 
-/* Flavor type */
-.btn {
-  border-radius: #f24472;
-  line-height: 30px;
-
-  margin-bottom: 15px;
-  margin-left: 10px;
-
-  border-color: #f24472;
-  background-color: #ffffff;
-  color: #000000;
-}
 /* Add note button */
 .add-note {
   outline: none;
-  margin-top: 30px;
+  margin-top: 10px;
   border: 1px solid #f24472;
   background-color: #ffffff;
   border-radius: 5px;
@@ -156,7 +120,7 @@
 }
 
 .upload-image {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   outline: none;
   border: 1px solid #f24472;
   background-color: #ffffff;
@@ -175,7 +139,7 @@
 }
 
 .add-cart {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .total {
@@ -184,17 +148,6 @@
   font-size: 24px;
   color: #f24472;
 }
-
-/* .add-cart{
-    
-} */
-
-.one {
-  font-size: 18px;
-  font-weight: bolder;
-  color: #000000;
-}
-
 
 .add-to-cart button {
   margin-top: 10px;
@@ -209,7 +162,7 @@
   font-size: 19px;
   /* letter-spacing: 0.05em; */
   font-family: "Cormorant Garamond", serif;
-  width: 95%;
+  width: 60%;
 }
 
 .add-to-cart button:hover{
@@ -280,7 +233,7 @@
 }
 
 .form-area p {
-  font-family: Caviar Dreams;
+  font-family: 'Caviar Dreams';
   color: #ffffff;
   line-height: 20px;
   letter-spacing: 0.05em;
@@ -306,7 +259,7 @@
   margin-top: 2em;
 }
 .note-area span {
-  font-family: Caviar Dreams;
+  font-family: 'Caviar Dreams';
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -327,7 +280,7 @@
 }
 
 .text-change-area span:nth-child(1) {
-  font-family: Caviar Dreams;
+  font-family: 'Caviar Dreams';
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -338,7 +291,7 @@
 }
 
 .text-change-area span:nth-child(2) {
-  font-family: Caviar Dreams;
+  font-family: 'Caviar Dreams';
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -356,14 +309,20 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    flex-flow: wrap;
   }
 
   .order-content {
-    margin-left: -20px;
+    margin-left: 40px;
     /* margin-top: 180px; */
   }
 
+  .Order-Modal{
+    text-align: center;
+  }
+
   .order-content h4 {
+    margin-top: 18px;
     font-size: 18px;
     line-height: 19px;
   }
@@ -377,31 +336,6 @@
     font-size: 15px;
     font-style: normal;
     line-height: 19px;
-  }
-
-  .flavor-category {
-    display: inline-block;
-  }
-
-  .flavor-category button {
-    line-height: 20px;
-    font-size: 14px;
-    padding: 0 5px 5px;
-  }
-
-  .flavor-size button:nth-child(1) {
-    margin-left: 0.5em;
-  }
-
-  .flavor-size button:nth-child(2) {
-    margin-left: 0.5em;
-  }
-
-  .flavor-size button {
-    padding: 0px 10px 5px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #000000;
   }
 
   .select {
@@ -422,42 +356,3 @@
 }
 
 /* CUSTOM CHECKBOX */
-#ck-button,.radio-toolbar {
-  margin: 4px;
-  margin-top: 0;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #f24472;
-  overflow: auto;
-  float: left;
-}
-
-#ck-button:hover {
-  background: #f2447257;
-}
-
-#ck-button label {
-  cursor: pointer;
-  float: left;
-  font-size: 16px;
-  width: auto;
-}
-
-#ck-button label span {
-  text-align: center;
-  padding: 3px 0px;
-  display: block;
-  padding: 4px 10px;
-}
-
-#ck-button label input {
-  position: absolute;
-  top: -20px;
-}
-
-#ck-button input:checked + span {
-  padding: 4px 10px;
-  background-color: #f24472;
-  color: #fff;
-}
-

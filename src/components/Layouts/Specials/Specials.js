@@ -89,13 +89,13 @@ function Specials() {
             <div key={cake.id+cake.flavour+id} className='special-flex-box'>
               <Link to={`/product/${cake.id}`}>
                 <img
+                className='special-gallery'
                 src={'https://kairostreats.com/assets/images/cakes/'+cake.picture}
                   alt='Ellipse-14cake2'
                 />
               </Link>
               <div key={cake.id} className='s-text'>
-                <h3>{cake.flavour}</h3>
-                {/* <p>{formatCurrency(cake.size8)}</p> */}
+                <h3>{cake.flavour}</h3> 
               </div>
             </div>
           ))}

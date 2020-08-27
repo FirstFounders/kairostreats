@@ -97,7 +97,9 @@ export default function OrderNow(props) {
                       onClick={() => setSize(value)}
                     />
                     <span>{key}</span>
+                    
                   </label>
+                 
                 </div>
                 )
               })
@@ -105,9 +107,11 @@ export default function OrderNow(props) {
             }
               </div>
             </div>
+            
               <Fragment>
                 {note.length < 3 ? (
-                  <button className='add-note'>
+                  <div className="addnote-area">
+                    <button className='add-note'>
                     Add note
                     <span className='svg-plus'>
                       <svg
@@ -125,6 +129,7 @@ export default function OrderNow(props) {
                       </svg>
                     </span>
                   </button>
+                  </div>
                 ) : (
                   <div className='note-area'>
                     <span>Note</span>
