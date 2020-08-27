@@ -3,7 +3,7 @@
 .overlay-header{
     display: flex;
     flex-direction: column;
-   text-align: center;
+   /* text-align: center; */
    color: #ffffff;
    align-items: center;
    justify-content: space-evenly;
@@ -28,24 +28,27 @@
     font-family: 'Cormorant Garamond', serif;
 }
 
-.model-content{
+/* .model-content{
     text-align: center;
-}
+} */
 
 .model-content h3{
     color: #ffffff;
     font-size: 24px;
     line-height: 30px;
     font-family: 'Cormorant Garamond', serif;
+    text-align: center;
 }
 
-.model-content button{
+.model-content .shop{
+    text-align: center;
+    margin-left:3rem;
     margin-top: 25px;
     padding: 13px;
     border: none;
     outline: none;
     font-weight: bold;
-    color: #F24472;;
+    color: #F24472;
     background-color: #ffffff;
     text-align: center;
     cursor: pointer;
@@ -55,6 +58,8 @@
     line-height: 30px;
     font-family: 'Cormorant Garamond', serif;
 }
+
+
 
 /* Open-Modal */
 .open-modal{
@@ -75,3 +80,31 @@
     z-index: -1;
     top: 0;
 }
+
+@media(max-width: 500px){
+    .model-content{
+        margin: 0;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

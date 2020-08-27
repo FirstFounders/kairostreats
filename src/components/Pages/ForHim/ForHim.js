@@ -1,100 +1,70 @@
-import React, {useState} from 'react';
+import React, { useContext, useEffect } from "react";
+import CakesContext from "../../../contexts/cakes/cakesContext";
+import { Link } from "react-router-dom";
 
-import './ForHim.css'
+import "./ForHim.css";
+import { formatCurrency } from "../../../helpers";
 
+function ForHim() {
+  const cakesContext = useContext(CakesContext);
+  useEffect(() => {
+    cakesContext.getAllCakes();
+  }, []);
 
-function ForHim(){
-    const [himdata, setHimData] = useState([]);
+  let { cakes } = cakesContext;
 
-    const addTocart = (him) => {
-        console.log("Add to cart sec");
-        setHimData([...himdata, him]);
-    }
+  cakes = cakes.filter((cake) => cake.category === "For Him");
 
-        const [forHims] = useState([
-            {
-                id: 1,
-                image: "https://i.ibb.co/g7L6gFP/vanilla.jpg",
-                flavour: " Vanilla/strawberry",
-                size8: "11500",
-                size10: "17000",
-                size12: "26500",
-                text: "Order now"
-              },
-              {
-                id: 2,
-                image: "https://i.ibb.co/RSGsjh5/chocolate-velvet.jpg",
-                flavour: "Chocolate/redvelvet ",
-                size8: "14500",
-                size10: "20000",
-                size12: "29500",
-                text: "Order now"
-              },
-              {
-                id: 3,
-                image: "https://i.ibb.co/f4H92bP/20200711-112216-1.jpg",
-                flavour: "Vanilla/strawberry",
-                size8: "11500",
-                size10: "16500",
-                size12: "24000",
-                text: "Order now"
-              },
-              {
-                id: 4,
-                image: "https://i.ibb.co/4SYRmdR/20200715-105023-1.jpg",
-                flavour: "Redvelvet/chocolate ",
-                size8: "14500",
-                size10: "20500",
-                size12: "28000",
-                text: "Order now"
-              },
-              {
-                id: 5,
-                image: "https://i.ibb.co/Vj1m8sm/20200617-091058-1.jpg",
-                flavour: "vanilla/strawberry/coconut cake",
-                size8: "15500",
-                size10: "22500",
-                text: "Order now"
-              },
-              {
-                id: 6,
-                image: "https://i.ibb.co/Vj1m8sm/20200617-091058-1.jpg",
-                flavour: "Redvelvet/chocolate/oreocookiecake ",
-                size8: "19000",
-                size10: "26000",
-                text: "Order now"
-              }
-        ]);
-    return(
-        <div className="Him-area">
-            <div className="Him-heading">
-                <h1>Cake For Him</h1>
-                <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
-            </div>
-
-            <div className="him-display">
-                {forHims.map((forHim, id) => (
-                    <div key={id}>
-                        <div className="him-container">
-                        <img className="him-gallery" src={forHim.image} alt={forHim.name}/>
-                        <div className="him-overlay overlay-left">
-                        <div className="him-text">
-                            <a href='#ordernow'onClick={() => addTocart(forHim)}>
-                                {forHim.text}
-                            </a>
-                        </div>
-                        </div>
-                        </div>
-
-                        <div className="him-content">
-                            <h5>{forHim.flavour}</h5>
-                        </div>
-
+  return (
+    <div className='Him-area'>
+      <div className='Him-heading'>
+        <h1>Cake For Him</h1>
+        <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
+      </div>
+      {cakes.length > 0 ? (
+        <div>
+          <h2 className='htag'>Select a cake</h2>
+          <div className='cake-display'>
+            {cakes.map((cake, idx) => (
+              <div key={idx}>
+                <div className='cake-container'>
+                  <img
+                    className='cake-gallery'
+                    src={cake.picture}
+                    alt={cake.name}
+                  />
+                  <div className='cake-overlay overlay-left'>
+                    <div className='cake-text'>
+                      <Link to={`/product/${cake.id}`}>order now</Link>
                     </div>
-                ))}
-            </div>
+                  </div>
+                </div>
+
+                <div className='cake-content'>
+                  <h5>{cake.name}</h5>
+                  <p>{cake.category}</p>
+                  <h4>{formatCurrency(cake.size8)}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-    )
+      ) : (
+        <div>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "30px",
+              marginTop: "60px",
+              fontWeight: "bold",
+            }}
+          >
+            No cake found
+          </h2>
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default ForHim
+export default ForHim;

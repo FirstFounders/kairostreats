@@ -18,7 +18,7 @@ body{
 a{
     text-decoration: none;
 }
- nav{
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -30,6 +30,7 @@ a{
     top: 0;
     width: 100%;
     z-index: 999;
+    font-family: 'caviardreams';
 }
 
 nav ul{
@@ -52,6 +53,7 @@ nav ul:first-child li{
     justify-content: center;
     align-items: center;
     left: -10px;
+    font-family: 'caviardreams';
 }
 
 nav ul:first-child li img{
@@ -63,6 +65,10 @@ nav ul:first-child li img{
     padding: 10px;
     color: #000;
     font-size: 16px;
+    font-family: 'caviardreams';
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    line-height: 20px;
 }
 
 nav a:hover{
@@ -80,10 +86,28 @@ nav a:hover{
     box-shadow: -12px 10px 10px 2px rgb(0, 0, 0, 0.4);
     color: #000;
     animation: slideUp 0.2s linear;
+    font-family: 'caviardreams';
+}
+
+.screen-menu{
+    display: none;
 }
 
 .sub-menu li{
     color: #ef476f;
+}
+.close-bg{
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F57093;
+    border-radius: 50%;
+}
+.close-modal-btn svg{
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 13px;
+    
 }
 
 
@@ -106,6 +130,55 @@ nav a:hover{
  nav ul li ul li{
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 150px; 
+}
+
+.ant-drawer-content-wrapper,
+    .ant-drawer-content-body
+    {
+        width: 700px !important;
+        box-sizing: border-box;
+        overflow: hidden;
+
+    }
+
+@media(max-width: 500px) {
+    nav{
+        position: sticky;
+        
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .screen-menu{
+        display: block;
+        position: relative;
+        
+    }
+
+    .screen-menu:hover .sub-menu{
+        display: block;
+    }
+
+    .screen-menu li{
+        color: #ef476f;
+}
+
+    .ant-drawer-content-wrapper,
+    .ant-drawer-content-body
+    {
+        overflow: hidden !important;
+        width: 390px !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important; 
+    }
+
+    
+    
+    
+    
+
 }
 

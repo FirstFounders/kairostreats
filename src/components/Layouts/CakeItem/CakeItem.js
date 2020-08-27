@@ -1,47 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
+import CakesContext from "../../../contexts/cakes/cakesContext";
+import CartContext from "../../../contexts/cart/cartContext";
 import "./CakeItem.css";
+import { Link } from "react-router-dom";
+import { formatCurrency } from "../../../helpers";
 
 function CakeItem() {
-  const [cart, setCart] = useState([]);
 
-  const addToCart = (cake) => {
-    console.log("Add to cart sec");
-    setCart([...cart, cake]);
+  const cakesContext = useContext(CakesContext);
+  const cartContext = useContext(CartContext);
+
+  useEffect(() => {
+    cakesContext.getAllCakes();
+  }, []);
+
+  const { addProduct, cart } = cartContext;
+  const { cakes } = cakesContext;  
+
+  const isInCart = (product) => {
+    return cart.find((item) => item.id === product.id);
   };
 
-  const [cakes] = useState([
-    {
-      image: "https://i.ibb.co/kHjh9PQ/Rectangle-19cake1.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/LJKFG5X/Rectangle-20cake2.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/LJKFG5X/Rectangle-20cake2.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-
-    {
-      image: "https://i.ibb.co/kHjh9PQ/Rectangle-19cake1.png",
-      text: "Order now",
-      name: "Vanilla Flavour Ginger Cake",
-      category: "Category",
-      price: "22,000",
-    },
-  ]);
   return (
     <div className='c-bg'>
       <div className='c-heading'>
@@ -50,23 +29,28 @@ function CakeItem() {
       </div>
 
       <div className='cake-display'>
-        {cakes.map((cake, idx) => (
+        {cakes.slice(0, 4).map((cake, idx) => (
           <div key={idx}>
             <div className='cake-container'>
-              <img className='cake-gallery' src={cake.image} alt={cake.name} />
+              <img
+                className='cake-gallery'
+                src={'https://kairostreats.com/assets/images/cakes/'+cake.picture}
+                alt={cake.flavour}
+              />
               <div className='cake-overlay overlay-left'>
                 <div className='cake-text'>
-                  <a href='#0rdernow' onClick={() => addToCart(cake)}>
-                    {cake.text}
-                  </a>
+                  {!isInCart(cake) ? (
+                    <Link to={`/product/${cake.id}`}>order now</Link>
+                  ) : (
+                    <p>Added to cart</p>
+                  )}
                 </div>
               </div>
             </div>
 
             <div className='cake-content'>
-              <h5>{cake.name}</h5>
-              <p>{cake.category}</p>
-              <h4>N {cake.price}</h4>
+              <h5>{cake.flavour}</h5>
+              <Link to={'/categories/'+cake.category}>{cake.category}</Link>
             </div>
           </div>
         ))}

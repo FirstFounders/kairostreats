@@ -1,3 +1,10 @@
+/* @font-face {
+    font-family: "CaviarDreams";
+    src: url("/CaviarDreams.ttf"),
+    } */
+*{
+    box-sizing: border-box;
+}
 .showcase-bg{
     background-image: url("./images/Group93bg.png");
     min-height: 100vh;
@@ -54,23 +61,32 @@
     margin-bottom: 50px;
 }
 
-.showcase-area .image-area .white-bg{
+.showcase-area .image-area{
     background-color: #ffffff;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
     width: 500px;
+    height: 400px;
     position: relative;
     margin-right: 50px;
 }
 
-.showcase-area .image-area .white-bg img{
+.showcase-area .image-area img{
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    top: 10px;
-    left: 10px;
+    left: 12px;
+    top: 12px;
+    animation: fadeCarousel 0.5s ease-out ;
 }
-
+@keyframes fadeCarousel{
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .text-area{
     display: flex; 
     flex-flow: column nowrap;
@@ -86,13 +102,27 @@
     font-weight: lighter; 
     /* margin-top: 15px;  */
     line-height: 69px;
+    animation: mySlideOut 0.4s linear;
+}
+
+@keyframes mySlideOut{
+    from{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .text-area .text p{
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'caviardreams';
     font-size: 20px;
     margin-bottom: 35px;
+    animation: mySlideOut 0.3s linear 0.2s;
     line-height: 23px;
+    font-weight: normal;
 }
 
 .text-area .text button{
@@ -104,15 +134,15 @@
     background-color: #ef476f;
     text-align: center;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
     font-size: 19px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'caviardreams';
     transition: 0.5s;
 }
 
 .text-area .text button:hover {
     background-color: #ef476f;
-    width: 50%;
+    width: 60%;
 }
 
 .svg-area{
@@ -159,6 +189,11 @@
 
 
 
+.svg-area .dot.active{
+    background:#F24472;
+}
+
+
 
 /* Media queries  */
 @media(max-width: 500px) {
@@ -178,20 +213,42 @@
         display: none;
     }
 
+    .overall-container{
+        margin: 0;
+    }
     .showcase-area{
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        margin-left: 3rem; 
+        /* height: 40vh; */
     
     }
-
+    .showcase-area .image-area{
+        background-color: #ffffff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        height: 200px;
+        position: relative;
+        /* margin-right: 50px; */
+    }
+    
     .showcase-area .image-area .white-bg{
-        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 3px;
+        left: 3px;
     }
 
     /* .showcase-area .image-area .image-bg{
     } */
-
+    .text-area{
+        margin-right: 4rem; 
+        /* margin-bottom: 100px; */
+    }
     .text-area .text h1{
         font-family: 'Playfair Display';
         font-size: 25px;
@@ -200,12 +257,50 @@
     }
     
     .text-area .text p{
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'caviardreams';
         font-size: 18px;
     }
 
+
+    .text-area .text button{
+        margin-bottom: 35px;
+        padding: 13px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #ef476f;
+        text-align: center;
+        cursor: pointer;
+        width: 95%;
+        font-size: 19px;
+        font-family: 'caviardreams';
+        transition: 0.5s;
+    }
+    
+    .text-area .text button:hover {
+        background-color: #ef476f;
+        width: 100%;
+    }
+
     .svg-area{
-        display: none;
+        margin-bottom: 40px;
+        margin-right: 8.5rem;
     }
 }
 
+@media(max-width: 1024px){
+    .showcase-bg{
+        background-image: url("./images/Group93bg.png");
+        min-height: 70vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        position: relative;
+    }
+    
+}
