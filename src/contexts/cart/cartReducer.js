@@ -58,7 +58,9 @@ export const CartReducer = (state, action) => {
       let increaseItem = state.cart.find(
         (item) => item.id === action.payload.id
       );
-      increaseItem.quantity++;
+        increaseItem.quantity = action.qty+1;
+        console.log(increaseItem.quantity);
+      // }
       return {
         ...state,
         ...sumItems(state.cart),
@@ -67,8 +69,13 @@ export const CartReducer = (state, action) => {
       };
 
     case DECREASE_ITEM_QUANTITY:
-      state.cart[state.cart.findIndex((item) => item.id === action.payload.id)]
-        .quantity--;
+      let decreaseItem = state.cart.find(
+        (item) => item.id === action.payload.id
+      );
+        decreaseItem.quantity = action.qty-1;
+        console.log(decreaseItem.quantity);
+      // state.cart[state.cart.findIndex((item) => item.id === action.payload.id)]
+      //   .quantity--;
       return {
         ...state,
         ...sumItems(state.cart),
