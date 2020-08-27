@@ -48,9 +48,9 @@ function Navbar() {
           </ul>
         </li>
 
-        <li className='menu'>
+        {/* <li className='menu'>
           <Link to='/customizepage'>Customize Cake</Link>
-        </li>
+        </li> */}
 
         <li className='screen-menu'>
           <Link to='/'>
