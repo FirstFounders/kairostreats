@@ -93,7 +93,7 @@ class ShowCase extends Component {
         clearTimeout(timer);
       }
       self.plusSize(-1);
-      timer = setTimeout(showSlides, 5000);
+      timer = setTimeout(showSlides, 6000);
     });
   }
 
