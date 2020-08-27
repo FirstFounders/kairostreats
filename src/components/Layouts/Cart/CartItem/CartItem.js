@@ -9,7 +9,7 @@ export default function CartItem({ product, remove }) {
   const [quan, setQty] = useState(product.quantity);
   const cartContext = useContext(CartContext);
   console.log(product.quantity);
-  const { cart, totalPrice, removeProduct, increase, decrease } = cartContext;
+  const { increase, decrease } = cartContext;
   return (
     <div className='overall-cart'>
       <div className='cart-sec'>
