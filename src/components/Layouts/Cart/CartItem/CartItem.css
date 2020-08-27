@@ -31,6 +31,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+  font-family:  'Caviar Dreams';
 }
 
 .category {
@@ -47,6 +48,7 @@
   width: 90px;
   height: 90px;
   margin-right: 20px;
+  border-radius: 50%;
 }
 
 .cart-cal {
@@ -66,6 +68,8 @@
   text-decoration: underline;
   margin-left: 5px;
   color: #cccccc;
+  font-family:  'Caviar Dreams';
+  font-weight: bold;
 }
 
 .total-cart h4 {
@@ -134,16 +138,19 @@
 /* Media Query */
 
 @media(max-width: 500px){
+  .overall-cart{
+    margin-left: 20px;
+  }
   .cart-sec {
     box-sizing: border-box;
     background-color: #bf0d3c;
     border-radius: 10px;
-    width: 375px;
-    height: 140px;
+    width: 395px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 210px; */
+
     margin: auto;
     flex-flow: nowrap;
     overflow-x: hidden;
@@ -156,61 +163,60 @@
   }
   
   .cart-container {
-    margin-right: 20px;
+    margin-right: 10px;
   }
   
   .cart-flex h4 {
     font-size: 14px;
-    line-height: 10px;
+    margin-top: 30px;
+
   }
   
-  .category {
-    letter-spacing: 0.0em;
-    text-decoration: underline;
-    font-size: 14px;
-    color: #cccccc;
-    font-weight: lighter;
-    line-height: 10px;
-  }
   
   .cart-img img {
     /* border-radius: 50%; */
     width: 90px;
     height: 90px;
-    margin-left: 20px;
+    margin-left: 15px;
   }
   
   .cart-cal {
     display: flex;
     justify-content: center;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    
   }
-  
-  .remove1 {
-    margin-right: -110px;
-    margin-bottom: 40px;
+
+  .remove1 svg{
+    margin-left: -40px;
     color: #cccccc;
     cursor: pointer;
+    height: 25px;
+    width: 25px;
   }
   
   .remove2 {
-    text-decoration: underline;
-    margin-left: 5px;
-    color: #cccccc;
+   display: none;
   }
   
+  .total-cart{
+    margin-right: 15px;
+  }
+
   .total-cart h4 {
-    color: #ffffff;
-    text-align: left;
+    font-size: 16px;
+    color: #cccccc;
+    text-align: start;
+    font-family: 'Caviar Dreams';
     
   }
   
   .total-cart p {
-
-    color: #ffffff;
-    margin-top: 10px;
-    margin-left: 5px;
+    font-size: 16px;
+    color: #cccccc;
+    margin-top: 15px;
+    text-align: start;
+    font-family: 'Caviar Dreams';
   }
 
   .model-content .checkout {

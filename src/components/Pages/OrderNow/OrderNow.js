@@ -87,65 +87,7 @@ export default function OrderNow(props) {
               {product.category}
             </Link>
             <div className='flavor-size'>
-              <p>Select Size</p>
-              <div>
-                {product.pricing && product.pricing
-                  ? Object.entries(product.pricing).map(([key, value]) => {
-                      return (
-                        <div id='ck-button' key={value}>
-                          <label>
-                            <input
-                              type='radio'
-                              name='size'
-                              defaultValue={value}
-                              onClick={() => setSize(value)}
-                            />
-                            <span>{key}</span>
-                          </label>
-                        </div>
-                      );
-                    })
-                  : null}
-              </div>
-            </div>
-            <Fragment>
-              {note.length < 3 ? (
-                <button className='add-note'>
-                  Add note
-                  <span className='svg-plus'>
-                    <svg
-                      width='13'
-                      height='13'
-                      viewBox='0 0 13 13'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                      onClick={showModal}
-                    >
-                      <path
-                        d='M4.6121 7.53169H0V4.6121H4.6121V0H7.54579V4.6121H12.1579V7.53169H7.54579V12.1579H4.6121V7.53169Z'
-                        fill='#F24472'
-                      />
-                    </svg>
-                  </span>
-                </button>
-              ) : (
-                <div className='note-area'>
-                  <span>Note</span>
-                  <div className='text-area-return'>
-                    <form>
-                      <textarea
-                        rows={6}
-                        type='text'
-                        maxLength='120'
-                        value={note}
-                        disabled
-                        readOnly
-                      />
-                    </form>
-
-                    <div className='text-change-area'>
-                      <span onClick={showModal}>Edit Note</span>
-                      <span onClick={() => setNote("")}>Delete Note</span>
+              
                     </div>
                   </div>
                 </div>
