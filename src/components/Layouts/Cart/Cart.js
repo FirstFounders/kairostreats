@@ -39,8 +39,8 @@ export default function Cart() {
                 <CartItem
                   product={item}
                   remove={() => removeProduct(item)}
-                  increase={() => increase(item)}
-                  decrease={() => decrease(item)}
+                  // increase={() => increase(item)}
+                  // decrease={() => decrease(item)}
                   key={id}
                 />
               ))}

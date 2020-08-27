@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./CartItem.css";
 import { formatCurrency } from "../../../../helpers";
+import CartContext from "../../../../contexts/cart/cartContext";
 
-export default function CartItem({ product, remove, increase, decrease }) {
+export default function CartItem({ product, remove }) {
+  const [quan, setQty] = useState(product.quantity);
+  const cartContext = useContext(CartContext);
+
+  const { increase, decrease } = cartContext;
   return (
     <div className='overall-cart'>
       <div className='cart-sec'>
         <div className='cart-flex'>
           <div className='cart-img'>
-                  <img
-                    className='cake-gallery'
-                src={'https://kairostreats.com/assets/images/cakes/'+product.picture}
-                    alt={product.flavour}
-                  />
+            <img
+              className='cake-gallery'
+              src={
+                "https://kairostreats.com/assets/images/cakes/" +
+                product.picture
+              }
+              alt={product.flavour}
+            />
           </div>
           <div className='cart-container'>
             <div>
               <h4>{product.flavour}</h4>
-              <Link to={'/categories/'+product.category}>{product.category}</Link>
+              <Link to={"/categories/" + product.category}>
+                {product.category}
+              </Link>
             </div>
             <div className='cart-cal'>
               {product.quantity > 1 && (
-                <span className='minus' onClick={decrease}>
+                <span
+                  className='minus'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setQty((quan) => quan - 1);
+                    decrease(product, quan);
+                  }}
+                >
                   <svg
                     width='11'
                     height='12'
@@ -35,8 +52,15 @@ export default function CartItem({ product, remove, increase, decrease }) {
                   </svg>
                 </span>
               )}
-              <span className='one'>{product.quantity}</span>
-              <span className='plus' onClick={increase}>
+              <span className='one'>{quan}</span>
+              <span
+                className='plus'
+                onClick={(e) => {
+                  e.preventDefault();
+                  setQty((quan) => quan + 1);
+                  increase(product, quan);
+                }}
+              >
                 <svg
                   width='11'
                   height='12'

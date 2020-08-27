@@ -24,12 +24,12 @@ const CartState = (props) => {
 
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
-  const increase = (payload) => {
-    dispatch({ type: INCREASE_ITEM_QUANTITY, payload });
+  const increase = (payload, qty) => {
+    dispatch({ type: INCREASE_ITEM_QUANTITY, payload, qty });
   };
 
-  const decrease = (payload) => {
-    dispatch({ type: DECREASE_ITEM_QUANTITY, payload });
+  const decrease = (payload, qty) => {
+    dispatch({ type: DECREASE_ITEM_QUANTITY, payload, qty });
   };
 
   const addProduct = (payload) => {
