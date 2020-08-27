@@ -2,20 +2,11 @@ import React from "react";
 import './App.css'
 import Navbar from "./components/Layouts/Navbar/Navbar";
 import Home from "./components/Pages/Home";
-import CustomizePage from "./components/Pages/CustomizePage/CustomizePage";
 import Footer from "./components/Layouts/Footer/Footer";
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import './asset/css/stylesheet.css'
-import CakeItem from "./components/Layouts/CakeItem/CakeItem";
 import ForHer from "./components/Pages/For Her/ForHer";
-import ForHim from "./components/Pages/ForHim/ForHim";
-
 import CakesState from "./contexts/cakes/CakesState";
 import OrderNow from "./components/Pages/OrderNow/OrderNow";
-import Birthday from "./components/Pages/Birthdays/Birthday";
-import Wedding from "./components/Pages/Wedding/Wedding";
-import SpecialPage from "./components/Pages/SpecialPage/SpecialPage";
 import CartState from "./contexts/cart/CartState";
 import success from "./components/Pages/success/success";
 
