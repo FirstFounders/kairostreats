@@ -137,7 +137,7 @@
 
   .special-flex > div {
     
-    flex-basis: 20%;
+    flex-basis: 30%;
     min-width: 250px;
   }
 }
