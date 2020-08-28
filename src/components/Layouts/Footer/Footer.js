@@ -12,9 +12,9 @@ export default function Footer(){
             <div className="footerOne">
                 <div className="infoBox">
                     {/* <h2>Contact Us</h2> */}
-                    <h3>1, Seni Towobola Close, Ilupeju</h3>
+                    <h3>1, Seni Towobola Close, Ilupeju, Lagos</h3>
                     {/* <h2>Phone</h2> */}
-                    <h3><a href="tel:+2348029431828">0802-943-1828</a></h3>
+                    <h3><a href="tel:+2348029431828">+234-802-943-1828</a></h3>
                     {/* <h2>Email Address</h2> */}
                     <h3><a href = "mailto: info@ekairostreats.com">info@kairostreats.com</a></h3>
                 </div>
