@@ -1,8 +1,19 @@
 .success-container {
-  min-height: 0vh;
-  max-width: 380px;
-  margin: 80px auto;
+  /* min-height: 0vh;
+  max-width: 100vh; */
+  /* width: 100%; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  z-index: 9999999;
+  bottom: 0;
+  left: 0;
 }
 
 .printer-top {
@@ -26,16 +37,18 @@
 .paper-container {
   position: relative;
   overflow: hidden;
-  height: 454px;
+  /* height: 454px; */
+  /* background-color: red; */
 }
 
 .paper {
-  background: #140909;
-  height: 447px;
-  position: absolute;
+  background: #f24472;
+  /* height: 447px; */
+  /* position: absolute; */
   z-index: 2;
-  margin: 0 12px;
-  margin-top: -12px;
+    box-shadow: 0 4px 2px -2px rgba(15, 15, 15, 0.2);
+    /* margin: 0 12px;
+  margin-top: -12px; */
   animation: print 1800ms cubic-bezier(0.68, -0.55, 0.265, 0.9) 2;
   -moz-animation: print 1800ms cubic-bezier(0.68, -0.55, 0.265, 0.9) 2;
 }
@@ -80,13 +93,25 @@
 .success-icon {
   text-align: center;
   font-size: 48px;
-  height: 72px;
-  background: #359d00;
-  border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  /* height: 72px; */
+  /* background: #359d00; */
+  /* border-radius: 50%; */
+  /* width: 72px;
+  height: 72px; */
   margin: 16px auto;
-  color: #fff;
+  color: green;
+}
+
+.fail-icon{
+  
+  text-align: center;
+  font-size: 48px;
+  color: white !important;
+  background-color: red;
+  margin: 16px auto;
+  width:72px;
+  height: 72px;
+  border-radius: 50%;
 }
 
 .success-title {
@@ -100,7 +125,7 @@
 .success-description {
   font-size: 15px;
   line-height: 21px;
-  color: #a1a1a1;
+  color: white;
   text-align: center;
   margin-bottom: 24px;
 }

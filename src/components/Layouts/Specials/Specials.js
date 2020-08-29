@@ -3,7 +3,7 @@ import "./Special.css";
 import CakesContext from "../../../contexts/cakes/cakesContext";
 
 import { Link } from "react-router-dom";
-import { formatCurrency } from "../../../helpers";
+// import { formatCurrency } from "../../../helpers";
 import Loading from "../Loading/Loading";
 
 function Specials() {
@@ -93,11 +93,11 @@ function Specials() {
                 src={'https://kairostreats.com/assets/images/cakes/'+cake.picture}
                   alt='Ellipse-14cake2'
                 />
-              </Link>
               <div key={cake.id} className='s-text'>
                 <h3>{cake.flavour}</h3>
                 {/* <p>{formatCurrency(cake.size8)}</p> */}
               </div>
+              </Link>
             </div>
           ))}
         </div>

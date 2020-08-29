@@ -29,11 +29,11 @@ function CakeItem() {
       </div>
       {loading && <Loading />}
       <div className='cake-display'>
-        {cakes.slice(0, 4).map((cake, idx) => (
+        {cakes.slice(0, 6).map((cake, idx) => (
           <div key={idx}>
             <div className='cake-container'>
               <img
-                className='cake-gallery'
+                // className='cake-gallery'
                 src={
                   "https://kairostreats.com/assets/images/cakes/" + cake.picture
                 }
