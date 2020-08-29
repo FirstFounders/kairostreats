@@ -134,7 +134,7 @@
     background-color: #ef476f;
     text-align: center;
     cursor: pointer;
-    width: 50%;
+    width: 70%;
     font-size: 19px;
     font-family: 'caviardreams';
     transition: 0.5s;
@@ -142,7 +142,7 @@
 
 .text-area .text button:hover {
     background-color: #ef476f;
-    width: 60%;
+    /* width: 75%; */
 }
 
 .svg-area{
@@ -264,7 +264,7 @@
 
     .text-area .text button{
         margin-bottom: 35px;
-        padding: 13px;
+        padding: 14px;
         border: none;
         outline: none;
         color: white;

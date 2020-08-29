@@ -173,9 +173,9 @@ class ShowCase extends Component {
               Our delightful cakes are a <br />great way to show love. Try us!
               </p>
               <p>
-              we bake with <br /> love!
+              we bake with <br /> love and everything sweet. Try us!
               </p>
-              <p>we create delicious <br /> memories.
+              <p>we create delicious <br /> memories with love. Try us!.
               </p>
               <p>
               Edible <br /> Memories!

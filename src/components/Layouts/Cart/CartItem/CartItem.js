@@ -26,7 +26,7 @@ export default function CartItem({ product, remove }) {
           <div className='cart-container'>
             <div>
               <h4>{product.flavour}</h4>
-              <Link to={"/categories/" + product.category}>
+              <Link to={"/categories/" + product.category} className="category">
                 {product.category}
               </Link>
             </div>
