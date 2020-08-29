@@ -49,7 +49,7 @@ export default function OrderNow(props) {
     prod.price = price;
     prod.size = size;
     prod.note = note;
-    if (fileList.length !== 0) prod.image = fileList[0].originFileObj;
+    if (fileList.length !== 0) prod.uploaded_picture = fileList[0].thumbUrl;
     console.log(prod);
     addProduct(prod);
     message.success("Cake has been added to cart");
@@ -79,10 +79,10 @@ export default function OrderNow(props) {
     onChange: (info) => {
       // file.status is empty when beforeUpload return false
       updateFileList(info.fileList.filter((file) => !!file.status));
-      setProduct({
-        ...product,
-        uploaded_picture:info.fileList
-      })
+      // setProduct({
+      //   ...product,
+      //   uploaded_ypicture:info.fileList
+      // })
     },
   };
  
