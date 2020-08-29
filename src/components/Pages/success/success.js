@@ -34,7 +34,7 @@ const Success = (props) => {
 
   // console.log(queryString.parse(props.location.search));
   if(status){
-  return(
+    return ReactDOM.render(
     <div className='success-container'>
       {/* <div className='printer-top' /> */}
       {/* <div className='paper-container'> */}
@@ -102,7 +102,8 @@ const Success = (props) => {
 
   )
 }else{
-  return (<Loading />)
+  
+  return ReactDOM.render(<Loading />)
 }
 }
 export default Success;
