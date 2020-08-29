@@ -50,7 +50,7 @@ export default function OrderNow(props) {
     prod.size = size;
     prod.note = note;
     if (fileList.length !== 0) prod.uploaded_picture = fileList[0].thumbUrl;
-    console.log(prod);
+    // console.log(prod);
     addProduct(prod);
     message.success("Cake has been added to cart");
   };
