@@ -26,9 +26,9 @@ export default function CartItem({ product, remove }) {
           <div className='cart-container'>
             <div>
               <h4>{product.flavour}</h4>
-              <Link to={"/categories/" + product.category} className="category">
+              {/* <Link to={"/categories/" + product.category} className="category">
                 {product.category}
-              </Link>
+              </Link> */}
             </div>
             <div className='cart-cal'>
               {product.quantity > 1 && (
@@ -105,7 +105,7 @@ export default function CartItem({ product, remove }) {
 
         <div className='total-cart'>
           <Link to={`/product/${product.id}`}>
-            <h4>Edit order</h4>
+            {/* <h4>Edit order</h4> */}
           </Link>
           <br></br>
           <br></br>

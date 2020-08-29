@@ -44,6 +44,8 @@ const Cartform = () => {
         </div>
       );
       setLoading(false);
+    }).catch((err)=>{
+      console.log(err.response.data)
     });
     setVisible(false);
   };
