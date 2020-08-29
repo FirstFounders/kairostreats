@@ -68,20 +68,21 @@ export default function OrderNow(props) {
     fileList,
     listType: "picture",
     beforeUpload: (file) => {
-      const isJPG = file.type === "image/jpg";
-      const isJPEG = file.type === "image/jpeg";
-      const isGIF = file.type === "image/gif";
-      const isPNG = file.type === "image/png";
-      if (!(isJPG || isJPEG || isGIF || isPNG)) {
+      const isImage = file.type === "image/jpg" || file.type === "image/jpeg" || file.type === "image/gif" || file.type  === "image/png" ? true : false;
+
+      if (!isImage) {
         message.error(`${file.name} is not an image file`);
         // return ;
       }
-      return isJPG || isJPEG || isGIF || isPNG;
+      return isImage;
     },
     onChange: (info) => {
       // file.status is empty when beforeUpload return false
       updateFileList(info.fileList.filter((file) => !!file.status));
-      console.log(info.fileList);
+      setProduct({
+        ...product,
+        uploaded_picture:info.fileList
+      })
     },
   };
  
