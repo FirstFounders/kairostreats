@@ -4,10 +4,11 @@ import CakesContext from "../../../contexts/cakes/cakesContext";
 
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../helpers";
+import Loading from "../Loading/Loading";
 
 function Specials() {
   const cakesContext = useContext(CakesContext);
-  const { recommended_cakes, getRecommendedCakes } = cakesContext;
+  const { recommended_cakes, getRecommendedCakes, loading } = cakesContext;
 
   useEffect(() => {
     getRecommendedCakes();
@@ -82,7 +83,7 @@ function Specials() {
         <h1>Specials</h1>
         <img src='https://i.ibb.co/T0bJPBn/Group-65.png' alt='Group' />
       </div>
-
+      {loading && <Loading/>}
       <div className='overall-special'>
         <div className='special-flex'>
           {recommended_cakes.map((cake, id) => (

@@ -16,7 +16,7 @@ export default function Cart() {
   // const [showButton, setShowButton] = useState(false);
   // const onClick = ()=> setShowButton(true);
   // const [cart, setCart] = useState([1, 2, 2]);
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <div>
       <div className='overlay-header'>
@@ -30,7 +30,9 @@ export default function Cart() {
             <Fragment>
               <h3>Your Basket is empty</h3>
               <Link to='/'>
-                <button className='shop'>Shop Now</button>
+                <button className='shop' onClick={() => setVisible(false)}>
+                  Shop Now
+                </button>
               </Link>
             </Fragment>
           ) : (
@@ -46,7 +48,11 @@ export default function Cart() {
               ))}
               <h2>Total</h2>
               <p>{formatCurrency(totalPrice)}</p>
-              <button id="form" className='checkout' onClick={() => setVisible(true)}>
+              <button
+                id='form'
+                className='checkout'
+                onClick={() => setVisible(true)}
+              >
                 Check Out
               </button>
               {visible && <Cartform />}
